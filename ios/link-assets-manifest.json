@@ -1,0 +1,53 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/Screens/assets/fonts/PTSerif-Bold.ttf",
+      "sha1": "bd3420a64f17abba655c59bcd47bbff015e98e9b"
+    },
+    {
+      "path": "src/Screens/assets/fonts/PTSerif-BoldItalic.ttf",
+      "sha1": "59920893869696202e63ab51ff4a08924efb4a5d"
+    },
+    {
+      "path": "src/Screens/assets/fonts/PTSerif-Italic.ttf",
+      "sha1": "9db935daaf3cd369086dcf3a50d0278829992576"
+    },
+    {
+      "path": "src/Screens/assets/fonts/PTSerif-Regular.ttf",
+      "sha1": "954241a37698c9cbb040a7ce005b02646bc68cde"
+    },
+    {
+      "path": "src/Screens/assets/fonts/Roboto-Black.ttf",
+      "sha1": "869d4331ed87830e8f19105aff140f1458655e95"
+    },
+    {
+      "path": "src/Screens/assets/fonts/Roboto-Bold.ttf",
+      "sha1": "3a4a7ff4fdba5317d6941e2d66e629df6c3c8cf3"
+    },
+    {
+      "path": "src/Screens/assets/fonts/Roboto-BoldItalic.ttf",
+      "sha1": "e60a97022d9be48539250d34f6385b5f31adde3f"
+    },
+    {
+      "path": "src/Screens/assets/fonts/Roboto-Italic.ttf",
+      "sha1": "7a1bc639173979e30cfff371155bacd085229650"
+    },
+    {
+      "path": "src/Screens/assets/fonts/Roboto-Medium.ttf",
+      "sha1": "b5ba3632933756e9f7e8a0f83bfe90c215a768e2"
+    },
+    {
+      "path": "src/Screens/assets/fonts/Roboto-Regular.ttf",
+      "sha1": "ba879317acdc045b8fa78cb8f948650627d0477c"
+    },
+    {
+      "path": "src/Screens/assets/fonts/Rubik-Medium.ttf",
+      "sha1": "d734c149587c12d9083c03bc90009c84b52aec78"
+    },
+    {
+      "path": "src/Screens/assets/fonts/Rubik-Regular.ttf",
+      "sha1": "3c3cc1631fd313531bc4b44dcb66e7c41e6bcf07"
+    }
+  ]
+}
