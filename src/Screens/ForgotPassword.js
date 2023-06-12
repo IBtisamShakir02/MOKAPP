@@ -1,26 +1,41 @@
 //import liraries
 import React, {Component} from 'react';
-import {View, Text, TextInput, StyleSheet, SafeAreaView} from 'react-native';
-import {RFPercentage} from 'react-native-responsive-fontsize';
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  SafeAreaView,
+  PixelRatio,
+} from 'react-native';
 import CusButton from './Components/CusButton';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import Header from './Components/Header';
 
 // create a component
-const ForgotPassword = () => {
+const ForgotPassword = ({navigation}) => {
+  const fontScale = PixelRatio.getFontScale();
+  const getFontSize = size => size / fontScale;
   return (
     <SafeAreaView style={styles.container}>
+      <Header
+        text={'Recover'}
+        onPress={() => navigation.push('LogInOwner')}
+        iconname={'arrowleft'}
+      />
       <View style={styles.container1}>
-        <Text style={styles.fstconttxt}>
-          An Email wiil be sent to Your Registered Email to Recover Your Account !
+        <Text style={[styles.fstconttxt, {fontSize: getFontSize(19)}]}>
+          An Email wiil be sent to Your Registered Email to Recover Your Account
+          !
         </Text>
-        <Text style={styles.text}>
+        <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
           Enter your Email:
         </Text>
         <TextInput
-          style={styles.field}
+          style={[styles.field, {fontSize: getFontSize(17)}]}
           placeholder="Enter Your Email"
           placeholderTextColor={'grey'}
           keyboardType="email-address"
@@ -32,46 +47,44 @@ const ForgotPassword = () => {
 };
 
 // define your styles
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
   },
   container1: {
-    marginTop: hp ('1%'),
+    marginTop: hp('1%'),
+    backgroundColor: 'white',
   },
   fstconttxt: {
     color: 'darkgreen',
-    fontSize: RFPercentage (2.3),
     textAlign: 'center',
-    fontFamily: 'PTSerif-Regular',
-    marginTop: hp ('5%'),
-    marginLeft: wp ('8%'),
-    marginRight: wp ('8%'),
+    fontFamily: 'Rubik-Regular',
+    marginTop: hp('5%'),
+    marginLeft: wp('8%'),
+    marginRight: wp('8%'),
   },
   text: {
-    fontSize: RFPercentage (2.7),
     color: 'black',
-    marginHorizontal: wp ('6%'),
-    marginTop: hp ('6%'),
+    marginHorizontal: wp('6%'),
+    marginTop: hp('6%'),
     color: 'black',
-    fontFamily: 'PTSerif-Bold',
+    fontFamily: 'Rubik-Medium',
   },
 
   field: {
     borderColor: 'white',
-    borderRadius: 15,
-    width: wp ('80%'),
+    borderRadius: 2,
+    width: wp('85%'),
     alignSelf: 'center',
-    marginTop: hp ('2%'),
+    marginTop: hp('2%'),
     backgroundColor: '#EBEEEE',
     color: '#2A3256',
-    fontSize: RFPercentage (2.4),
-    height: hp ('8%'),
-    paddingHorizontal: wp ('5%'),
-    fontFamily: 'PTSerif-Bold',
+    height: hp('6.5%'),
+    paddingHorizontal: wp('5%'),
+    fontFamily: 'Rubik-Regular',
     elevation: 5,
-    marginBottom: hp ('5%'),
+    marginBottom: hp('5%'),
   },
 });
 

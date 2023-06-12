@@ -1,5 +1,5 @@
 //import liraries
-import React, {Component} from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -7,39 +7,47 @@ import {
   TouchableOpacity,
   SafeAreaView,
   StatusBar,
+  PixelRatio,
 } from 'react-native';
 import CartBtn from './Components/CartBtn';
-import {RFPercentage} from 'react-native-responsive-fontsize';
 import KeyPad from './Components/KeyPad';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import Header from './Components/Header';
 
 // create a component
 const CashierManualInput = ({navigation}) => {
+  const fontScale = PixelRatio.getFontScale();
+  const getFontSize = size => size / fontScale;
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="white" barStyle="dark-content" />
-      <View style={{position: 'absolute', alignSelf: 'center'}}>
-        <View style={styles.container}>
-          <Text style={styles.V1txt}>Manual Input</Text>
-
+      <View style={{alignSelf: 'center'}}>
+        <Header
+          text={'Cashier'}
+          onPress={() => navigation.push('')}
+          iconname={'menu-fold'}
+        />
+        <View style={styles.manualcont}>
+          <Text style={[styles.V1txt, {fontSize: getFontSize(24)}]}>
+            Manual Input
+          </Text>
         </View>
-
-        <KeyPad />
-
-        <View>
+        <View style={styles.keypadview}>
+          <KeyPad />
+        </View>
+        <View style={styles.cartview}>
           <TouchableOpacity
             style={{
-              marginTop: hp ('4%'),
-              marginBottom: hp ('3%'),
-            }}
-          >
+              marginTop: hp('1%'),
+              marginBottom: hp('1%'),
+            }}>
             <CartBtn
               text="(Count) Items     Total:(Bill)"
               IconName="shopping-cart"
-              onPress={() => navigation.push ('PaymentMethod1')}
+              onPress={() => navigation.push('PaymentMethod1')}
             />
           </TouchableOpacity>
         </View>
@@ -49,24 +57,42 @@ const CashierManualInput = ({navigation}) => {
 };
 
 // define your styles
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
-    width: wp ('100%'),
-    height: hp ('9%'),
+    flex: 1,
     alignSelf: 'center',
-    borderWidth: hp ('0.1%'),
-    borderColor: '#d3d3d3',
+  },
+  manualcont: {
+    backgroundColor: 'white',
+    height: hp('9%'),
+    width: wp('97%'),
+    alignSelf: 'center',
+    borderRadius: hp('2%'),
     justifyContent: 'center',
-    marginBottom: hp ('1%'),
-    elevation: 10,
+    borderColor: '#d3d3d3',
+    marginTop: hp('0.8%'),
+    elevation: 5,
   },
   V1txt: {
     color: 'black',
-    fontSize: RFPercentage (3),
     textAlign: 'left',
-    marginHorizontal: wp ('4.5%'),
-    fontFamily: 'PTSerif-Regular',
+    marginHorizontal: wp('4.5%'),
+    fontFamily: 'Rubik-Regular',
+  },
+  cartview: {
+    height: hp('10%'),
+    width: wp('98%'),
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: hp('2%'),
+  },
+  keypadview: {
+    height: hp('63%'),
+    width: wp('99%'),
+    backgroundColor: 'white',
+    alignSelf: 'center',
   },
 });
 

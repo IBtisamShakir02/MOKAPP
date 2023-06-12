@@ -1,7 +1,12 @@
 //import liraries
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import {RFPercentage} from 'react-native-responsive-fontsize';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  PixelRatio,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import {
   widthPercentageToDP as wp,
@@ -9,23 +14,27 @@ import {
 } from 'react-native-responsive-screen';
 // create a component
 const CartBtn = ({text, onPress, IconName}) => {
+  const fontScale = PixelRatio.getFontScale();
+  const getFontSize = size => size / fontScale;
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
       <View style={styles.button}>
         <View style={{flexDirection: 'row'}}>
-          {IconName
-            ? <Icon
-                name={IconName}
-                color="white"
-                size={25}
-                style={{
-                  position: 'absolute',
-                  marginHorizontal: wp ('5%'),
-                  marginVertical: hp ('-0.2%'),
-                }}
-              />
-            : null}
-          <Text style={styles.buttonText}> {text} </Text>
+          {IconName ? (
+            <Icon
+              name={IconName}
+              color="white"
+              size={25}
+              style={{
+                marginHorizontal: wp('5%'),
+                marginVertical: hp('-0.2%'),
+              }}
+            />
+          ) : null}
+          <Text style={[styles.buttonText, {fontSize: getFontSize(16)}]}>
+            {' '}
+            {text}{' '}
+          </Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -33,10 +42,10 @@ const CartBtn = ({text, onPress, IconName}) => {
 };
 
 // define your styles
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   button: {
-    height: hp ('8%'),
-    width: wp ('80%'),
+    height: hp('8%'),
+    width: wp('80%'),
     borderRadius: 8,
     justifyContent: 'center',
     alignSelf: 'center',
@@ -47,10 +56,7 @@ const styles = StyleSheet.create ({
     flex: 1,
     color: 'white',
     textTransform: 'uppercase',
-    fontSize: RFPercentage (2.1),
-    textAlign: 'right',
-    marginRight: wp ('5%'),
-    fontFamily: 'PTSerif-Bold',
+    fontFamily: 'Rubik-Medium',
   },
 });
 

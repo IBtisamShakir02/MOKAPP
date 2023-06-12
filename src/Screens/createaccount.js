@@ -7,79 +7,89 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  PixelRatio,
 } from 'react-native';
+import Header from './Components/Header';
 import CusButton from './Components/CusButton';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import {RFPercentage} from 'react-native-responsive-fontsize';
 const CreateAccount = ({navigation}) => {
+  const fontScale = PixelRatio.getFontScale();
+  const getFontSize = size => size / fontScale;
   return (
     <ScrollView
       style={{
         backgroundColor: 'white',
         flex: 1,
-      }}
-    >
+      }}>
       <SafeAreaView>
+        <Header
+          text={'SignUp'}
+          onPress={() => navigation.push('Hello')}
+          iconname={'arrowleft'}
+        />
         <View
           style={{
-            width: wp ('90%'),
-            height: hp ('12%'),
-            borderWidth: wp ('0%'),
+            width: wp('90%'),
+            height: hp('12%'),
+            borderWidth: wp('0%'),
             borderRadius: 10,
             borderColor: '#0000000D',
             alignSelf: 'center',
             justifyContent: 'center',
-            marginTop: hp ('5%'),
-          }}
-        >
+            marginTop: hp('1.5%'),
+            backgroundColor: 'white',
+          }}>
           <Text
             style={{
               color: 'darkgreen',
-              fontSize: RFPercentage (2.5),
+              fontSize: getFontSize(20),
               textAlign: 'center',
-              fontFamily: 'PTSerif-Regular',
-            }}
-          >
+              fontFamily: 'Rubik-Regular',
+            }}>
             Note: Must Fill all the Fields in order to Create your Account !
           </Text>
         </View>
         <View style={styles.container}>
-          <Text style={styles.text}>Email:</Text>
+          <View style={styles.fieldcont}>
+            <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+              Email:
+            </Text>
 
-          <TextInput
-            style={styles.field}
-            placeholder="Enter Your Email"
-            placeholderTextColor={'grey'}
-            keyboardType="email-address"
-          />
+            <TextInput
+              style={[styles.field, {fontSize: getFontSize(17)}]}
+              placeholder="Enter Your Email"
+              placeholderTextColor={'grey'}
+              keyboardType="email-address"
+            />
 
-          <Text style={styles.text}>Phone Number:</Text>
-          <TextInput
-            style={styles.field}
-            placeholder="Enter Your Phone Number"
-            placeholderTextColor={'grey'}
-            keyboardType="phone-pad"
-          />
-          <Text style={styles.text}>Password:</Text>
-          <TextInput
-            style={styles.field}
-            placeholder="Enter Your Password"
-            placeholderTextColor={'grey'}
-            secureTextEntry
-          />
-          <TouchableOpacity
-            style={{
-              marginTop: hp ('7%'),
-            }}
-          >
+            <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+              Phone Number:
+            </Text>
+            <TextInput
+              style={[styles.field, {fontSize: getFontSize(17)}]}
+              placeholder="Enter Your Phone Number"
+              placeholderTextColor={'grey'}
+              keyboardType="phone-pad"
+            />
+            <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+              Password:
+            </Text>
+            <TextInput
+              style={[styles.field, {fontSize: getFontSize(17)}]}
+              placeholder="Enter Your Password"
+              placeholderTextColor={'grey'}
+              secureTextEntry
+            />
+          </View>
+          <TouchableOpacity>
             <CusButton
               text="LogIn"
               backgroundColor={'#1A72DD'}
               color={'white'}
-              onPress={() => navigation.push ('SignIn')}
+              onPress={() => navigation.push('SignIn')}
             />
           </TouchableOpacity>
         </View>
@@ -88,32 +98,39 @@ const CreateAccount = ({navigation}) => {
   );
 };
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 38,
+    height: hp('60%'),
+    width: wp('100%'),
+    alignSelf: 'center',
+    backgroundColor: 'white',
+    alignItems: 'center',
   },
 
   text: {
-    fontSize: RFPercentage (2.7),
-    marginHorizontal: wp ('-3%'),
-    marginTop: hp ('4%'),
+    marginTop: hp('2%'),
     color: 'black',
-    fontFamily: 'PTSerif-Bold',
+    fontFamily: 'Rubik-Medium',
+    marginHorizontal: wp('5%'),
   },
 
   field: {
     borderColor: 'white',
-    borderWidth: wp ('0%'),
-    borderRadius: 15,
-    width: wp ('80%'),
-    marginTop: hp ('1%'),
+    borderRadius: 2,
+    width: wp('85%'),
+    marginTop: hp('1%'),
     backgroundColor: '#EBEEEE',
     color: '#2A3256',
-    fontSize: RFPercentage (2.4),
-    height: hp ('8%'),
-    paddingHorizontal: 30,
-    fontFamily: 'PTSerif-Regular',
+    height: hp('6.5%'),
+    paddingHorizontal: wp('5%'),
+    fontFamily: 'Rubik-Regular',
     elevation: 5,
+    alignSelf: 'center',
+  },
+  fieldcont: {
+    height: hp('43%'),
+    width: wp('95%'),
+    backgroundColor: 'white',
   },
 });
 export default CreateAccount;

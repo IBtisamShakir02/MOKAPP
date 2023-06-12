@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   Alert,
   ScrollView,
+  PixelRatio,
 } from 'react-native';
 import CusButton from './Components/CusButton';
 import Wicon from 'react-native-vector-icons/FontAwesome';
@@ -16,21 +17,24 @@ import Icon from 'react-native-vector-icons/Entypo';
 import Sicon from 'react-native-vector-icons/MaterialIcons';
 import Cicon from 'react-native-vector-icons/Feather';
 import {useState} from 'react';
-import {RFPercentage} from 'react-native-responsive-fontsize';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import Header from './Components/Header';
 // create a component
 const LogInOwner = ({navigation}) => {
-  const [Email, setEmail] = useState ('');
-  const [Password, setPassword] = useState ('');
+  const fontScale = PixelRatio.getFontScale();
+  const getFontSize = size => size / fontScale;
+
+  const [Email, setEmail] = useState('');
+  const [Password, setPassword] = useState('');
 
   const submit = () => {
     if (Email === 'Ibtisam' && Password === '000') {
-      navigation.navigate ('AddProduct');
+      navigation.navigate('AddProduct');
     } else {
-      Alert.alert ('Invalid Data');
+      Alert.alert('Invalid Data');
     }
   };
 
@@ -39,41 +43,49 @@ const LogInOwner = ({navigation}) => {
       style={{
         backgroundColor: 'white',
         flex: 1,
-      }}
-    >
+      }}>
       <SafeAreaView>
+        <Header
+          text={'Owner'}
+          onPress={() => navigation.push('SignIn')}
+          iconname={'arrowleft'}
+        />
         <View style={styles.fstcont}>
-          <Text style={styles.fstconttxt}>
+          <Text style={[styles.fstconttxt, {fontSize: getFontSize(20)}]}>
             Note: Must Fill all the Fields in order to Create your Account !
           </Text>
         </View>
         <View style={styles.container}>
-          <Text style={styles.text}>Email or Phone Number:</Text>
+          <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+            Email or Phone Number:
+          </Text>
           <TextInput
-            style={styles.field}
+            style={[styles.field, {fontSize: getFontSize(17)}]}
             placeholder="Enter Your Email"
             placeholderTextColor={'grey'}
             value={Email}
-            onChangeText={data => setEmail (data)}
+            onChangeText={data => setEmail(data)}
             keyboardType="email-address"
           />
-          <Text style={styles.text}>Password:</Text>
+          <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+            Password:
+          </Text>
           <TextInput
-            style={styles.field}
+            style={[styles.field, {fontSize: getFontSize(17)}]}
             placeholder="Enter Your Password"
             placeholderTextColor={'grey'}
             value={Password}
-            onChangeText={data => setPassword (data)}
+            onChangeText={data => setPassword(data)}
             secureTextEntry
           />
 
-          <Text style={styles.otptxt}>
+          <Text style={[styles.otptxt, {fontSize: getFontSize(20)}]}>
             Send OTP:
           </Text>
 
           <View style={styles.btncont1}>
             <TouchableOpacity style={styles.emailbtn}>
-              <Icon name="email" size={25} color="white" />
+              <Icon name="email" size={25} color="#1A72DD" />
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.wtsappbtn}>
@@ -86,25 +98,22 @@ const LogInOwner = ({navigation}) => {
             <TouchableOpacity style={styles.callbtn}>
               <Cicon name="phone-call" size={25} color="white" />
             </TouchableOpacity>
-
           </View>
           <TouchableOpacity
             style={{
-              marginTop: hp ('5%'),
-            }}
-          >
+              marginTop: hp('5%'),
+            }}>
             <CusButton
               text="LogIn"
               backgroundColor={'#1A72DD'}
               color={'white'}
-              onPress={() => submit ()}
+              onPress={() => submit()}
             />
           </TouchableOpacity>
           <TouchableOpacity>
             <Text
-              style={styles.frgtpass}
-              onPress={() => navigation.push ('ForgotPassword')}
-            >
+              style={[styles.frgtpass, {fontSize: getFontSize(18)}]}
+              onPress={() => navigation.push('ForgotPassword')}>
               Forgot Password?
             </Text>
           </TouchableOpacity>
@@ -115,55 +124,51 @@ const LogInOwner = ({navigation}) => {
 };
 
 // define your styles
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
-    marginTop: hp ('1%'),
+    marginTop: hp('1%'),
   },
   fstcont: {
-    width: wp ('90%'),
-    height: hp ('10%'),
+    width: wp('90%'),
+    height: hp('10%'),
     borderRadius: 5,
     borderColor: '#0000000D',
     alignSelf: 'center',
     justifyContent: 'center',
-    marginTop: hp ('2%'),
+    marginTop: hp('2%'),
   },
   fstconttxt: {
     color: 'darkgreen',
-    fontSize: RFPercentage (2.3),
     textAlign: 'center',
-    fontFamily: 'PTSerif-Regular',
+    fontFamily: 'Rubik-Regular',
   },
 
   text: {
-    fontSize: RFPercentage (2.7),
     color: 'black',
-    marginHorizontal: wp ('6%'),
-    marginTop: hp ('4%'),
+    marginHorizontal: wp('6%'),
+    marginTop: hp('4%'),
     color: 'black',
-    fontFamily: 'PTSerif-Bold',
+    fontFamily: 'Rubik-Medium',
   },
 
   field: {
     borderColor: 'white',
-    borderRadius: 15,
-    width: wp ('80%'),
+    borderRadius: 2,
+    width: wp('85%'),
     alignSelf: 'center',
-    marginTop: hp ('1%'),
+    marginTop: hp('1%'),
     backgroundColor: '#EBEEEE',
     color: '#2A3256',
-    fontSize: RFPercentage (2.4),
-    height: hp ('8%'),
-    paddingHorizontal: wp ('5%'),
-    fontFamily: 'PTSerif-Bold',
+    height: hp('6.5%'),
+    paddingHorizontal: wp('5%'),
+    fontFamily: 'Rubik-Regular',
     elevation: 5,
   },
   otptxt: {
     color: 'black',
-    fontSize: RFPercentage (2.4),
     margin: 25,
-    marginBottom: hp ('5%'),
-    fontFamily: 'PTSerif-Bold',
+    marginBottom: hp('5%'),
+    fontFamily: 'Rubik-Medium',
   },
   btncont1: {
     flexDirection: 'row',
@@ -171,9 +176,9 @@ const styles = StyleSheet.create ({
     justifyContent: 'center',
   },
   emailbtn: {
-    backgroundColor: '#1A72DD',
-    width: wp ('10%'),
-    height: hp ('5%'),
+    backgroundColor: 'white',
+    width: wp('10%'),
+    height: hp('5%'),
     borderRadius: 10,
     borderColor: 'white',
     flexDirection: 'row',
@@ -182,12 +187,12 @@ const styles = StyleSheet.create ({
     elevation: 20,
   },
   wtsappbtn: {
-    backgroundColor: '#1A72DD',
-    width: wp ('10%'),
-    height: hp ('5%'),
+    backgroundColor: 'limegreen',
+    width: wp('10%'),
+    height: hp('5%'),
     borderRadius: 10,
     borderColor: 'white',
-    marginStart: wp ('3%'),
+    marginStart: wp('3%'),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -195,23 +200,23 @@ const styles = StyleSheet.create ({
   },
   smsbtn: {
     backgroundColor: '#1A72DD',
-    width: wp ('10%'),
-    height: hp ('5%'),
+    width: wp('10%'),
+    height: hp('5%'),
     borderRadius: 10,
     borderColor: 'white',
-    marginStart: wp ('3%'),
+    marginStart: wp('3%'),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     elevation: 20,
   },
   callbtn: {
-    backgroundColor: '#1A72DD',
-    width: wp ('10%'),
-    height: hp ('5%'),
+    backgroundColor: 'lime',
+    width: wp('10%'),
+    height: hp('5%'),
     borderRadius: 10,
     borderColor: 'white',
-    marginStart: wp ('3%'),
+    marginStart: wp('3%'),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -220,8 +225,7 @@ const styles = StyleSheet.create ({
   frgtpass: {
     color: '#1A72DD',
     textAlign: 'center',
-    marginTop: hp ('1%'),
-    fontSize: RFPercentage (2.4),
+    marginTop: hp('1%'),
     textDecorationLine: 'underline',
     fontFamily: 'Rubik-Regular',
   },

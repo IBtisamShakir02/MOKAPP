@@ -1,5 +1,5 @@
 //import liraries
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -8,9 +8,8 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  PixelRatio,
 } from 'react-native';
-import {RFPercentage} from 'react-native-responsive-fontsize';
-import DropDownPicker from 'react-native-dropdown-picker';
 import CusButton from './Components/CusButton';
 import SrchIcon from 'react-native-vector-icons/Feather';
 import {
@@ -18,50 +17,44 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Delete from 'react-native-vector-icons/AntDesign';
+import Header from './Components/Header';
 // create a component
 const ListProduct = ({navigation}) => {
-  const [isOpen, setIsOpen] = useState (false);
-  const [currentValue, setCurrentValue] = useState ([]);
-  const items = [
-    {label: 'All Branches', value: 'all branches'},
-    {label: 'Islamabad', value: 'islamabad'},
-    {label: 'Lahore', value: 'lahore'},
-    {label: 'Faisalabad', value: 'faisalabad'},
-    {label: 'Karachi', value: 'karachi'},
-    {label: 'Multan', value: 'multan'},
-  ];
-
+  const fontScale = PixelRatio.getFontScale();
+  const getFontSize = size => size / fontScale;
   return (
     <ScrollView
       style={{
         backgroundColor: '#EBEEEE',
         flex: 1,
-      }}
-    >
-
+      }}>
       <SafeAreaView>
+        <Header
+          text={'List Product'}
+          iconname={'arrowleft'}
+          onPress={() => navigation.push('AddProduct')}
+        />
         <View style={styles.Searchview}>
           <TextInput
-            style={styles.txtinpt}
+            style={[styles.txtinpt, {fontSize: getFontSize(22)}]}
             placeholder="Search Here"
             placeholderTextColor={'grey'}
-            placeholderStyle={{width: wp ('20%')}}
+            placeholderStyle={{width: wp('20%')}}
           />
           <TouchableOpacity
-            style={{alignSelf: 'center', marginLeft: wp ('1.5%')}}
-          >
+            style={{alignSelf: 'center', marginLeft: wp('1.5%')}}>
             <SrchIcon name="search" size={30} color={'black'} />
           </TouchableOpacity>
         </View>
 
-        <View style={{marginTop: hp ('0.5%')}}>
+        <View style={{marginTop: hp('0.5%')}}>
           <View>
             <TouchableOpacity activeOpacity={0.5} style={styles.btn}>
               <View>
-                <Text style={styles.btnTxt}>
+                <Text style={[styles.btnTxt, {fontSize: getFontSize(22)}]}>
                   Wagyu Sate
                 </Text>
-                <Text style={styles.smlfnt}>
+                <Text style={[styles.smlfnt, {fontSize: getFontSize(14)}]}>
                   All Branches
                 </Text>
               </View>
@@ -69,11 +62,10 @@ const ListProduct = ({navigation}) => {
                 <Text
                   style={{
                     color: 'black',
-                    fontSize: RFPercentage (2.8),
-                    fontFamily: 'PTSerif-Bold',
-                    marginTop: hp ('1.3%'),
-                  }}
-                >
+                    fontSize: getFontSize(21),
+                    fontFamily: 'Rubik-Medium',
+                    marginTop: hp('1.3%'),
+                  }}>
                   $27.99
                 </Text>
               </View>
@@ -83,10 +75,10 @@ const ListProduct = ({navigation}) => {
           <View>
             <TouchableOpacity activeOpacity={0.5} style={styles.btn}>
               <View>
-                <Text style={styles.btnTxt}>
+                <Text style={[styles.btnTxt, {fontSize: getFontSize(22)}]}>
                   Wagyu Black Pepper
                 </Text>
-                <Text style={styles.smlfnt}>
+                <Text style={[styles.smlfnt, {fontSize: getFontSize(14)}]}>
                   All Branches
                 </Text>
               </View>
@@ -94,11 +86,10 @@ const ListProduct = ({navigation}) => {
                 <Text
                   style={{
                     color: 'black',
-                    fontSize: RFPercentage (2.8),
-                    fontFamily: 'PTSerif-Bold',
-                    marginTop: hp ('1.3%'),
-                  }}
-                >
+                    fontSize: getFontSize(21),
+                    fontFamily: 'Rubik-Medium',
+                    marginTop: hp('1.3%'),
+                  }}>
                   $27.99
                 </Text>
               </View>
@@ -108,10 +99,10 @@ const ListProduct = ({navigation}) => {
           <View>
             <TouchableOpacity activeOpacity={0.5} style={styles.btn}>
               <View>
-                <Text style={styles.btnTxt}>
+                <Text style={[styles.btnTxt, {fontSize: getFontSize(22)}]}>
                   Salad Egg
                 </Text>
-                <Text style={styles.smlfnt}>
+                <Text style={[styles.smlfnt, {fontSize: getFontSize(14)}]}>
                   All Branches
                 </Text>
               </View>
@@ -119,11 +110,10 @@ const ListProduct = ({navigation}) => {
                 <Text
                   style={{
                     color: 'black',
-                    fontSize: RFPercentage (2.8),
-                    fontFamily: 'PTSerif-Bold',
-                    marginTop: hp ('1.3%'),
-                  }}
-                >
+                    fontSize: getFontSize(21),
+                    fontFamily: 'Rubik-Medium',
+                    marginTop: hp('1.3%'),
+                  }}>
                   $27.99
                 </Text>
               </View>
@@ -133,10 +123,10 @@ const ListProduct = ({navigation}) => {
           <View>
             <TouchableOpacity activeOpacity={0.5} style={styles.btn}>
               <View>
-                <Text style={styles.btnTxt}>
+                <Text style={[styles.btnTxt, {fontSize: getFontSize(22)}]}>
                   Salad Tuna
                 </Text>
-                <Text style={styles.smlfnt}>
+                <Text style={[styles.smlfnt, {fontSize: getFontSize(14)}]}>
                   All Branches
                 </Text>
               </View>
@@ -144,28 +134,25 @@ const ListProduct = ({navigation}) => {
                 <Text
                   style={{
                     color: 'black',
-                    fontSize: RFPercentage (2.8),
-                    fontFamily: 'PTSerif-Bold',
-                    marginTop: hp ('1.3%'),
-                  }}
-                >
+                    fontSize: getFontSize(21),
+                    fontFamily: 'Rubik-Medium',
+                    marginTop: hp('1.3%'),
+                  }}>
                   $27.99
                 </Text>
               </View>
             </TouchableOpacity>
           </View>
-
         </View>
 
         <View>
           <TouchableOpacity
-            style={{marginTop: hp ('5%'), marginBottom: hp ('1%')}}
-          >
+            style={{marginTop: hp('5%'), marginBottom: hp('1%')}}>
             <CusButton
               text="Add New Product"
               backgroundColor={'#1A72DD'}
               color={'white'}
-              onPress={() => navigation.push ('AccountTab')}
+              onPress={() => navigation.push('AccountTab')}
               IconName=""
             />
           </TouchableOpacity>
@@ -173,40 +160,40 @@ const ListProduct = ({navigation}) => {
             style={{
               flexDirection: 'row',
               alignSelf: 'center',
-              marginBottom: hp ('4%'),
-            }}
-          >
+              marginBottom: hp('4%'),
+            }}>
             <Delete name="delete" size={20} color={'#FF0307'} />
-            <Text style={styles.Deltxt}>Delete Product</Text>
+            <Text style={[styles.Deltxt, {fontSize: getFontSize(18)}]}>
+              Delete Product
+            </Text>
           </TouchableOpacity>
         </View>
-
       </SafeAreaView>
     </ScrollView>
   );
 };
 
 // define your styles
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   Searchview: {
     backgroundColor: 'white',
-    width: wp ('99%'),
-    height: hp ('9%'),
-    marginTop: hp ('0.2%'),
-    borderRadius: RFPercentage (1.5),
-    borderWidth: wp ('0.1%'),
+    width: wp('99%'),
+    height: hp('9%'),
+    marginTop: hp('0.2%'),
+    borderRadius: 8,
+    borderWidth: wp('0.1%'),
     borderColor: '#d3d3d3',
     alignSelf: 'center',
     flexDirection: 'row',
-    elevation: 10,
+    elevation: 8,
   },
   btn: {
     width: '90%',
-    height: hp ('9%'),
+    height: hp('9%'),
     backgroundColor: 'white',
     alignSelf: 'center',
-    borderRadius: 20,
-    marginTop: hp ('2%'),
+    borderRadius: wp('2%'),
+    marginTop: hp('2%'),
     padding: 12,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -214,31 +201,27 @@ const styles = StyleSheet.create ({
   },
   btnTxt: {
     color: 'black',
-    fontSize: RFPercentage (2.8),
-    fontFamily: 'PTSerif-Bold',
+    fontFamily: 'Rubik-Medium',
   },
   smlfnt: {
     color: 'black',
-    fontSize: RFPercentage (2),
     fontWeight: '400',
-    fontFamily: 'PTSerif-Italic',
+    fontFamily: 'Rubik-Regular',
   },
   txtinpt: {
-    width: wp ('83%'),
+    width: wp('83%'),
     backgroundColor: 'white',
-    height: hp ('7%'),
-    fontFamily: 'PTSerif-Regular',
-    fontSize: RFPercentage (2.8),
+    height: hp('7%'),
+    fontFamily: 'Rubik-Regular',
     color: 'black',
-    marginTop: hp ('0.8%'),
-    paddingHorizontal: wp ('5%'),
+    marginTop: hp('0.8%'),
+    paddingHorizontal: wp('5%'),
     justifyContent: 'space-between',
   },
   Deltxt: {
     color: '#FF0307',
-    fontSize: RFPercentage (2.4),
-    marginLeft: wp ('1%'),
-    fontFamily: 'PTSerif-Regular',
+    marginLeft: wp('1%'),
+    fontFamily: 'Rubik-Regular',
   },
 });
 

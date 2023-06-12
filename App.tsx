@@ -7,16 +7,12 @@ import LogInEmployee from './src/Screens/LogInEmployee';
 import LogInOwner from './src/Screens/LoogInOwner';
 import createaccount from './src/Screens/createaccount';
 const Stack = createNativeStackNavigator();
-import MIcon from 'react-native-vector-icons/Entypo';
-import {TouchableOpacity} from 'react-native';
 import Addproduct from './src/Screens/AddProduct';
-import {RFPercentage} from 'react-native-responsive-fontsize';
 import ListProduct from './src/Screens/Listproduct';
 import CashierManualInput from './src/Screens/CashierManualInput';
 import PaymentMethod1 from './src/Screens/PaymentMethodInput';
 import SpecialMenu from './src/Screens/CashierSpecialMenu';
 import BottomNavigation from './src/Screens/Components/BottomNavigation';
-import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import ForgotPassword from './src/Screens/ForgotPassword';
 import AccountTab from './src/Screens/AccountTab';
 
@@ -37,17 +33,7 @@ function App() {
           name="CreateAccount"
           component={createaccount}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            title: 'SignUp',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(4),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
+            headerShown: false,
           }}
         />
 
@@ -56,17 +42,7 @@ function App() {
           name="SignIn"
           component={LogIn}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            title: 'LogIn',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(4),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
+            headerShown: false,
           }}
         />
 
@@ -75,18 +51,7 @@ function App() {
           name="LoginEmp"
           component={LogInEmployee}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            title: 'Employee',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(4),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
-            headerBackVisible: true,
+            headerShown: false,
           }}
         />
 
@@ -95,18 +60,7 @@ function App() {
           name="LogInOwner"
           component={LogInOwner}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            title: 'Owner',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(4),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
-            headerBackVisible: true,
+            headerShown: false,
           }}
         />
 
@@ -115,24 +69,7 @@ function App() {
           name="Cashier1"
           component={BottomNavigation}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            headerStyle: {backgroundColor: 'white'},
-            title: 'Cashier',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(4),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
-            headerBackVisible: false,
-            headerLeft: () => (
-              <TouchableOpacity style={{marginTop: hp('1%')}}>
-                <MIcon name="menu" size={30} color="#1A72DD" />
-              </TouchableOpacity>
-            ),
+            headerShown: false,
           }}
         />
 
@@ -141,23 +78,7 @@ function App() {
           name="AddProduct"
           component={Addproduct}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            title: 'Add Product',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(3.5),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
-            headerBackVisible: false,
-            headerLeft: () => (
-              <TouchableOpacity style={{marginTop: hp('1%')}}>
-                <MIcon name="menu" size={30} color="#1A72DD" />
-              </TouchableOpacity>
-            ),
+            headerShown: false,
           }}
         />
 
@@ -166,17 +87,7 @@ function App() {
           name="Listproduct"
           component={ListProduct}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: true,
-            title: 'List Product',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(3.5),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
+            headerShown: false,
           }}
         />
 
@@ -185,23 +96,7 @@ function App() {
           name="CashierSpecialMenu"
           component={SpecialMenu}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            title: 'Cashier',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(3.5),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
-            headerBackVisible: false,
-            headerLeft: () => (
-              <TouchableOpacity style={{marginTop: hp('1%')}}>
-                <MIcon name="menu" size={30} color="#1A72DD" />
-              </TouchableOpacity>
-            ),
+            headerShown: false,
           }}
         />
 
@@ -210,23 +105,7 @@ function App() {
           name="CashierManIn"
           component={CashierManualInput}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            title: 'Cashier',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(3.5),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
-            headerBackVisible: false,
-            headerLeft: () => (
-              <TouchableOpacity style={{marginTop: hp('1%')}}>
-                <MIcon name="menu" size={30} color="#1A72DD" />
-              </TouchableOpacity>
-            ),
+            headerShown: false,
           }}
         />
 
@@ -235,56 +114,21 @@ function App() {
           name="PaymentMethod1"
           component={PaymentMethod1}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            title: 'Payment Method',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(3.5),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
-            headerBackVisible: false,
-            headerLeft: () => (
-              <TouchableOpacity style={{marginTop: hp('1%')}}>
-                <MIcon name="menu" size={30} color="#1A72DD" />
-              </TouchableOpacity>
-            ),
+            headerShown: false,
           }}
         />
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPassword}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: false,
-            title: 'Recover Password',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(4),
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
+            headerShown: false,
           }}
         />
         <Stack.Screen
           name="AccountTab"
           component={AccountTab}
           options={{
-            headerShown: true,
-            headerTintColor: '#1A72DD',
-            headerShadowVisible: true,
-            title: 'Account',
-            headerTitleStyle: {
-              color: '#1A72DD',
-              fontSize: RFPercentage(4),
-              fontWeight: '500',
-              fontFamily: 'PTSerif-Bold',
-            },
-            headerTitleAlign: 'center',
+            headerShown: false,
           }}
         />
       </Stack.Navigator>

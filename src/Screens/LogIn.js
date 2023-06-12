@@ -8,58 +8,67 @@ import {
   StyleSheet,
   ScrollView,
   StatusBar,
+  Image,
+  PixelRatio,
 } from 'react-native';
 import CusButton from './Components/CusButton';
-import Accountimg from '../Screens/assets/images/HelloScreenimg.svg';
-import {RFPercentage} from 'react-native-responsive-fontsize';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import Header from './Components/Header';
 // create a component
 const LogIn = ({navigation}) => {
+  const fontScale = PixelRatio.getFontScale();
+  const getFontSize = size => size / fontScale;
   return (
     <ScrollView style={{backgroundColor: 'white', flex: 1}}>
       <StatusBar backgroundColor="white" barStyle="dark-content" />
       <SafeAreaView>
-        <View>
-          <Text style={styles.cont1txt}>
+        <Header
+          text={'LogIn'}
+          onPress={() => navigation.push('Hello')}
+          iconname={'arrowleft'}
+        />
+        <View style={styles.fstcont}>
+          <Text style={[styles.cont1txt, {fontSize: getFontSize(35)}]}>
             Welcome to MOKPOS!
           </Text>
+        </View>
+        <View style={styles.scndtxtcont}>
           <Text
             style={{
               color: 'black',
-              margin: 10,
-              marginLeft: wp ('12%'),
-              fontSize: RFPercentage (2.3),
-              width: wp ('70%'),
-              fontFamily: 'Roboto-Italic',
-            }}
-          >
-            Select Login as the Owner or Employee first to Continue
+              fontSize: getFontSize(19),
+              fontFamily: 'Rubik-Regular',
+            }}>
+            Select Login as Owner or as Employee to Continue.
           </Text>
-          <View style={{alignSelf: 'center'}}>
-            <Accountimg
-              style={{
-                width: wp ('90%'),
-                height: hp ('43%'),
-              }}
-            />
-          </View>
+        </View>
+        <View style={styles.scndcont}>
+          <Image
+            source={require('../Screens/assets/images/signin.jpg')}
+            style={{
+              width: wp('120%'),
+              height: hp('42%'),
+              alignSelf: 'center',
+            }}
+          />
+        </View>
+        <View style={styles.thrdcont}>
           <TouchableOpacity
             style={{
-              marginTop: hp ('2%'),
-              marginBottom: hp ('1%'),
-              marginLeft: wp ('25%'),
-              width: wp ('50%'),
-              height: hp ('6.5%'),
-            }}
-          >
+              marginTop: hp('1%'),
+              marginBottom: hp('1%'),
+              marginLeft: wp('25%'),
+              width: wp('50%'),
+              height: hp('6.5%'),
+            }}>
             <CusButton
               text="OWNER"
               backgroundColor={'#1A72DD'}
               color={'white'}
-              onPress={() => navigation.push ('LogInOwner')}
+              onPress={() => navigation.push('LogInOwner')}
               IconName="user"
             />
           </TouchableOpacity>
@@ -67,51 +76,48 @@ const LogIn = ({navigation}) => {
             style={{
               color: 'black',
               textAlign: 'center',
-              marginBottom: hp ('1%'),
-              fontWeight: 'bold',
-            }}
-          >
+              fontSize: getFontSize(18),
+              marginBottom: hp('0.3%'),
+              fontFamily: 'Rubik-Medium',
+            }}>
             or
           </Text>
           <TouchableOpacity
             style={{
-              marginLeft: wp ('25%'),
-              width: wp ('50%'),
-              height: hp ('6.5%'),
-            }}
-          >
+              marginLeft: wp('25%'),
+              width: wp('50%'),
+              height: hp('6.5%'),
+            }}>
             <CusButton
               text="Employee"
-              backgroundColor={'#1A72DD'}
+              backgroundColor={'green'}
               color={'white'}
-              onPress={() => navigation.push ('LoginEmp')}
-              IconName="users"
+              onPress={() => navigation.push('LoginEmp')}
+              IconName="user"
             />
           </TouchableOpacity>
-
+        </View>
+        <View style={styles.forthcont}>
           <Text
             style={{
               color: 'black',
               textAlign: 'center',
-              fontSize: RFPercentage (2),
-              marginTop: hp ('2%'),
+              fontSize: getFontSize(16),
               fontFamily: 'Rubik-Regular',
-            }}
-          >
+            }}>
             Don't have an Account?
           </Text>
 
           <TouchableOpacity>
             <Text
-              onPress={() => navigation.push ('CreateAccount')}
+              onPress={() => navigation.push('CreateAccount')}
               style={{
                 color: '#1A72DD',
                 textAlign: 'center',
-                fontSize: RFPercentage (2.5),
+                fontSize: getFontSize(20),
                 textDecorationLine: 'underline',
                 fontFamily: 'Rubik-Medium',
-              }}
-            >
+              }}>
               SignUp
             </Text>
           </TouchableOpacity>
@@ -122,14 +128,46 @@ const LogIn = ({navigation}) => {
 };
 
 // define your styles
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   cont1txt: {
-    width: wp ('85%'),
     alignSelf: 'center',
-    paddingTop: hp ('3.5%'),
-    fontSize: RFPercentage (4.5),
+    paddingTop: hp('0.5%'),
     color: 'black',
     fontFamily: 'Rubik-Medium',
+  },
+  fstcont: {
+    height: hp('5.5%'),
+    width: wp('90%'),
+    alignSelf: 'center',
+    backgroundColor: 'white',
+    marginTop: hp('3%'),
+  },
+  scndtxtcont: {
+    height: hp('6%'),
+    width: wp('55%'),
+    backgroundColor: 'white',
+    alignSelf: 'center',
+  },
+  scndcont: {
+    backgroundColor: 'white',
+    height: hp('43%'),
+    width: wp('98%'),
+    alignSelf: 'center',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+  thrdcont: {
+    backgroundColor: 'white',
+    height: hp('20%'),
+    width: wp('100%'),
+    alignSelf: 'center',
+    marginTop:hp('2%'),
+  },
+  forthcont: {
+    backgroundColor: 'white',
+    height: hp('8%'),
+    width: wp('95%'),
+    alignSelf: 'center',
   },
 });
 //make this component available to the app

@@ -1,6 +1,5 @@
 //import liraries
-import React, {Component} from 'react';
-
+import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Cashier1 from '../Cashier1';
 import CashierSpecialMenu from '../CashierSpecialMenu';
@@ -14,7 +13,7 @@ import {
 
 // create a component
 
-const Tab = createBottomTabNavigator ();
+const Tab = createBottomTabNavigator();
 const BottomNavigation = () => {
   return (
     <Tab.Navigator
@@ -24,13 +23,13 @@ const BottomNavigation = () => {
         tabBarInactiveTintColor: 'grey',
         tabBarActiveTintColor: '#1A72DD',
         tabBarStyle: {
-          borderTopLeftRadius: wp ('3%'),
-          borderTopRightRadius: wp ('3%'),
-          height: hp ('8%'),
+          borderTopLeftRadius: wp('3%'),
+          borderTopRightRadius: wp('3%'),
+          height: hp('8%'),
           backgroundColor: 'white',
         },
-      }}
-    >
+        tabBarHideOnKeyboard: true,
+      }}>
       <Tab.Screen
         name="Cashier"
         component={Cashier1}

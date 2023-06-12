@@ -1,54 +1,116 @@
 //import liraries
-import React, {Component, useState} from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  PermissionsAndroid,
+  PixelRatio,
+} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-import {RFPercentage} from 'react-native-responsive-fontsize';
 import CusButton from './Components/CusButton';
 import DownIcon from 'react-native-vector-icons/AntDesign';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import Header from './Components/Header';
 
 // create a component
 const AccountTab = ({navigation}) => {
+  const fontScale = PixelRatio.getFontScale();
+  const getFontSize = size => size / fontScale;
+
+  const [cameraPhoto, setcameraPhoto] = useState();
+  const [galleryPhoto, setgalleryPhoto] = useState();
+  let options = {
+    saveToPhotos: true,
+    mediaType: 'photo',
+  };
+  const openCamera = async () => {
+    const granted = await PermissionsAndroid.request(
+      PermissionsAndroid.PERMISSIONS.CAMERA,
+    );
+    if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+      const result = await launchCamera(options);
+      setcameraPhoto(result.assets[0].uri);
+    }
+  };
+  const openGallery = async () => {
+    const result = await launchImageLibrary(options);
+    setgalleryPhoto(result.assets[0].uri);
+  };
   return (
     <SafeAreaView style={styles.container}>
+      <Header
+        text={'Accounts'}
+        onPress={() => navigation.push('Listproduct')}
+        iconname={'arrowleft'}
+      />
       <View>
         <View style={styles.Details}>
           <View>
-            <TouchableOpacity activeOpacity={0.8}>
+            <TouchableOpacity activeOpacity={0.8} onPress={openCamera}>
               <Image
-                source={require ('../Screens/assets/images/profil-photo.png')}
+                source={{uri: galleryPhoto}}
                 style={{
-                  height: hp ('13%'),
-                  width: wp ('25%'),
-                  marginLeft: wp ('3%'),
-                  borderWidth: wp ('0.2%'),
-                  borderColor: '#4b0082',
-                  borderRadius: 50,
+                  height: hp('15%'),
+                  width: wp('30%'),
+                  marginLeft: wp('3%'),
+                  borderWidth: wp('0.2%'),
+                  borderRadius: 10,
                 }}
               />
             </TouchableOpacity>
+            <TouchableOpacity
+              onPress={openGallery}
+              style={{
+                height: hp('3%'),
+                width: wp('32%'),
+                backgroundColor: '#2A3256',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginTop: hp('0.5%'),
+                borderRadius: wp('1.5%'),
+                marginLeft: wp('1.8%'),
+              }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: getFontSize(12),
+                  textAlign: 'center',
+                  fontFamily: 'Rubik-Regular',
+                }}>
+                Choose From Gallery
+              </Text>
+            </TouchableOpacity>
           </View>
           <View style={styles.txtView}>
-            <Text style={styles.txt1}>MOKPOS Store</Text>
-            <Text style={styles.txt2}>Owner@gmail.com</Text>
+            <Text style={[styles.txt1, {fontSize: getFontSize(25)}]}>
+              MOKPOS Store
+            </Text>
+            <Text style={[styles.txt2, {fontSize: getFontSize(15)}]}>
+              Owner@gmail.com
+            </Text>
           </View>
         </View>
         <View style={styles.secCont}>
           <TouchableOpacity
             style={{
               flexDirection: 'row',
-              width: wp ('90%'),
-              marginLeft: wp ('1.5%'),
+              width: wp('90%'),
+              marginLeft: wp('1.5%'),
               justifyContent: 'space-between',
               borderBottomColor: 'black',
-              borderBottomWidth: wp ('0.2%'),
+              borderBottomWidth: wp('0.2%'),
               alignSelf: 'center',
-            }}
-          >
-            <Text style={styles.cont2txt}>Setting Account</Text>
+            }}>
+            <Text style={[styles.cont2txt, {fontSize: getFontSize(17)}]}>
+              Setting Account
+            </Text>
             <DownIcon
               name="right"
               size={18}
@@ -56,22 +118,23 @@ const AccountTab = ({navigation}) => {
               style={{
                 alignSelf: 'center',
                 justifyContent: 'center',
-                marginTop: hp ('1%'),
+                marginTop: hp('1%'),
               }}
             />
           </TouchableOpacity>
           <TouchableOpacity
             style={{
               flexDirection: 'row',
-              width: wp ('90%'),
-              marginLeft: wp ('1.5%'),
+              width: wp('90%'),
+              marginLeft: wp('1.5%'),
               justifyContent: 'space-between',
               borderBottomColor: 'black',
-              borderBottomWidth: wp ('0.2%'),
+              borderBottomWidth: wp('0.2%'),
               alignSelf: 'center',
-            }}
-          >
-            <Text style={styles.cont2txt}>Subscription History</Text>
+            }}>
+            <Text style={[styles.cont2txt, {fontSize: getFontSize(17)}]}>
+              Subscription History
+            </Text>
             <DownIcon
               name="right"
               size={18}
@@ -79,22 +142,23 @@ const AccountTab = ({navigation}) => {
               style={{
                 alignSelf: 'center',
                 justifyContent: 'center',
-                marginTop: hp ('1%'),
+                marginTop: hp('1%'),
               }}
             />
           </TouchableOpacity>
           <TouchableOpacity
             style={{
               flexDirection: 'row',
-              width: wp ('90%'),
-              marginLeft: wp ('1.5%'),
+              width: wp('90%'),
+              marginLeft: wp('1.5%'),
               justifyContent: 'space-between',
               borderBottomColor: 'black',
-              borderBottomWidth: wp ('0.2%'),
+              borderBottomWidth: wp('0.2%'),
               alignSelf: 'center',
-            }}
-          >
-            <Text style={styles.cont2txt}>Business Information</Text>
+            }}>
+            <Text style={[styles.cont2txt, {fontSize: getFontSize(17)}]}>
+              Business Information
+            </Text>
             <DownIcon
               name="right"
               size={18}
@@ -102,22 +166,23 @@ const AccountTab = ({navigation}) => {
               style={{
                 alignSelf: 'center',
                 justifyContent: 'center',
-                marginTop: hp ('1%'),
+                marginTop: hp('1%'),
               }}
             />
           </TouchableOpacity>
           <TouchableOpacity
             style={{
               flexDirection: 'row',
-              width: wp ('90%'),
-              marginLeft: wp ('1.5%'),
+              width: wp('90%'),
+              marginLeft: wp('1.5%'),
               justifyContent: 'space-between',
               borderBottomColor: 'black',
-              borderBottomWidth: wp ('0.2%'),
+              borderBottomWidth: wp('0.2%'),
               alignSelf: 'center',
-            }}
-          >
-            <Text style={styles.cont2txt}>Dashboard</Text>
+            }}>
+            <Text style={[styles.cont2txt, {fontSize: getFontSize(17)}]}>
+              Dashboard
+            </Text>
             <DownIcon
               name="right"
               size={18}
@@ -125,22 +190,23 @@ const AccountTab = ({navigation}) => {
               style={{
                 alignSelf: 'center',
                 justifyContent: 'center',
-                marginTop: hp ('1%'),
+                marginTop: hp('1%'),
               }}
             />
           </TouchableOpacity>
           <TouchableOpacity
             style={{
               flexDirection: 'row',
-              width: wp ('90%'),
-              marginLeft: wp ('1.5%'),
+              width: wp('90%'),
+              marginLeft: wp('1.5%'),
               justifyContent: 'space-between',
               borderBottomColor: 'black',
-              borderBottomWidth: wp ('0.2%'),
+              borderBottomWidth: wp('0.2%'),
               alignSelf: 'center',
-            }}
-          >
-            <Text style={styles.cont2txt}>User Help</Text>
+            }}>
+            <Text style={[styles.cont2txt, {fontSize: getFontSize(17)}]}>
+              User Help
+            </Text>
             <DownIcon
               name="right"
               size={18}
@@ -148,7 +214,7 @@ const AccountTab = ({navigation}) => {
               style={{
                 alignSelf: 'center',
                 justifyContent: 'center',
-                marginTop: hp ('1%'),
+                marginTop: hp('1%'),
               }}
             />
           </TouchableOpacity>
@@ -157,12 +223,11 @@ const AccountTab = ({navigation}) => {
               styles.cont2txt,
               {
                 textAlign: 'left',
-                fontFamily: 'PTSerif-Bold',
-                fontSize: RFPercentage (1.7),
-                marginLeft: wp ('7%'),
+                fontFamily: 'Rubik-Medium',
+                fontSize: getFontSize(13),
+                marginLeft: wp('7%'),
               },
-            ]}
-          >
+            ]}>
             MOKPOS V.1.0
           </Text>
         </View>
@@ -171,7 +236,8 @@ const AccountTab = ({navigation}) => {
             text="Log Out"
             backgroundColor={'white'}
             color={'red'}
-            onPress={() => navigation.push ('LogInOwner')}
+            marginTop={30}
+            onPress={() => navigation.push('LogInOwner')}
           />
         </View>
       </View>
@@ -180,58 +246,56 @@ const AccountTab = ({navigation}) => {
 };
 
 // define your styles
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
     backgroundColor: 'white',
   },
   Details: {
-    flex: 0.6,
+    flex: 0.8,
     backgroundColor: 'white',
-    width: wp ('98%'),
+    width: wp('98%'),
     alignItems: 'center',
     flexDirection: 'row',
-    marginTop: hp ('1%'),
+    marginTop: hp('0.5%'),
     alignSelf: 'center',
+    elevation: 2,
   },
   txtView: {
-    width: wp ('60%'),
-    height: hp ('18%'),
+    width: wp('60%'),
+    height: hp('18%'),
     justifyContent: 'center',
-    marginLeft: wp ('3%'),
+    marginLeft: wp('3%'),
   },
   txt1: {
-    color: 'black',
-    fontSize: RFPercentage (3.5),
-    marginRight: wp ('5%'),
+    color: '#2A3256',
     textAlignVertical: 'center',
-    fontFamily: 'PTSerif-Bold',
+    fontFamily: 'Rubik-Medium',
+    marginTop: hp('-3%'),
   },
   txt2: {
     color: 'black',
-    fontSize: RFPercentage (2.1),
-    fontFamily: 'PTSerif-Regular',
+    fontFamily: 'Rubik-Regular',
   },
   secCont: {
     flex: 1.5,
     backgroundColor: 'white',
-    width: wp ('99%'),
-    marginRight: wp ('3%'),
-    marginTop: hp ('3%'),
+    width: wp('98%'),
+    alignSelf: 'center',
+    elevation: 5,
+    marginTop: hp('0.5%'),
   },
   btnView: {
-    flex: 1.5,
+    flex: 1.2,
     backgroundColor: 'white',
-    width: wp ('98%'),
+    width: wp('98%'),
     alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    elevation: 8,
   },
   cont2txt: {
-    fontSize: RFPercentage (2.5),
     color: 'black',
-    fontFamily: 'PTSerif-Regular',
+    fontFamily: 'Rubik-Regular',
     margin: 9,
     marginTop: 15,
     textAlign: 'center',
