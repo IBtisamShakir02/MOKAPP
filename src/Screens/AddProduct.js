@@ -65,17 +65,16 @@ const Addproduct = ({navigation}) => {
   ];
 
   return (
-    <ScrollView
-      style={{
+      <SafeAreaView style={{
         backgroundColor: 'white',
         flex: 1,
       }}>
-      <SafeAreaView>
         <Header
           text={'Add Product'}
           iconname={'arrowleft'}
           onPress={() => navigation.push('LogInOwner')}
         />
+        <ScrollView>
         <View>
           <Text style={[styles.Detailstxt, {fontSize: getfontSize(23)}]}>
             Product Details:
@@ -296,8 +295,8 @@ const Addproduct = ({navigation}) => {
             />
           </TouchableOpacity>
         </View>
+        </ScrollView>
       </SafeAreaView>
-    </ScrollView>
   );
 };
 
