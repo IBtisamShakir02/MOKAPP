@@ -1,5 +1,5 @@
 //import liraries
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -20,6 +20,10 @@ import Header from './Components/Header';
 const PaymentMethod1 = ({navigation}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
+  const [Count, setCount] = useState('');
+  const CountBill = value => {
+    setCount(value);
+  };
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <Header
@@ -41,7 +45,7 @@ const PaymentMethod1 = ({navigation}) => {
                 fontFamily: 'Rubik-Medium',
               },
             ]}>
-            CountBill
+            ${Count ? Count : ''}
           </Text>
         </View>
         <View style={{flexDirection: 'row', alignSelf: 'center'}}>
@@ -103,7 +107,7 @@ const PaymentMethod1 = ({navigation}) => {
           </Text>
         </View>
         <View style={styles.keypadcont}>
-          <KeyPad />
+          <KeyPad CountBill={CountBill} />
         </View>
       </View>
     </SafeAreaView>

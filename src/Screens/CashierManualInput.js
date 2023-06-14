@@ -59,16 +59,16 @@ const CashierManualInput = ({navigation}) => {
 // define your styles
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: '#E3E3E3ED',
     flex: 1,
     alignSelf: 'center',
   },
   manualcont: {
     backgroundColor: 'white',
-    height: hp('9%'),
-    width: wp('97%'),
+    height: hp('7%'),
+    width: wp('99%'),
     alignSelf: 'center',
-    borderRadius: hp('2%'),
+    borderRadius: wp('2%'),
     justifyContent: 'center',
     borderColor: '#d3d3d3',
     marginTop: hp('0.8%'),
@@ -81,12 +81,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Rubik-Regular',
   },
   cartview: {
-    height: hp('10%'),
+    height: hp('14%'),
     width: wp('98%'),
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: hp('2%'),
   },
   keypadview: {
     height: hp('63%'),

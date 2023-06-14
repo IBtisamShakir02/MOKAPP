@@ -27,13 +27,12 @@ const CusButton = ({onPress}) => {
 // define your styles
 const styles = StyleSheet.create({
   button: {
-    height: hp('5%'),
-    width: wp('10%'),
     borderRadius: wp('2%'),
     justifyContent: 'center',
     backgroundColor: '#1A72DD',
     elevation: 3,
     margin: wp('1%'),
+    marginBottom: hp('1%'),
   },
 });
 

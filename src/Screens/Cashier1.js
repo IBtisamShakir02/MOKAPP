@@ -6,14 +6,16 @@ import {
   SafeAreaView,
   Text,
   TouchableOpacity,
-  ScrollView,
+  FlatList,
   PixelRatio,
+  Image,
+  Dimensions,
 } from 'react-native';
 import SearchIcon from 'react-native-vector-icons/Ionicons';
 import BarcodeIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import GridIcon from 'react-native-vector-icons/Feather';
-import DownIcon from 'react-native-vector-icons/MaterialIcons';
-import Cardgrid from './Components/Cardgrid';
+import data from './Components/Data';
+import AddButton from '../Screens/Components/AddButton';
 import CartBtn from './Components/CartBtn';
 import {
   widthPercentageToDP as wp,
@@ -25,10 +27,28 @@ import Header from './Components/Header';
 const Cashier1 = ({navigation}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
+  const renderItem = ({item}) => {
+    const fontScale = PixelRatio.getFontScale();
+    const getFontSize = size => size / fontScale;
+    return (
+      <View style={styles.listContainer}>
+        <View style={styles.imageContainer}>
+          <Image source={item.image} style={styles.image} />
+        </View>
+        <Text style={[styles.nametxt, {fontSize: getFontSize(20)}]}>
+          {item.name}
+        </Text>
+        <Text style={[styles.pricetxt, {fontSize: getFontSize(18)}]}>
+          {item.price}
+        </Text>
+        <AddButton />
+      </View>
+    );
+  };
   return (
     <SafeAreaView
       style={{
-        backgroundColor: '#d3d3d3',
+        backgroundColor: '#E3E3E3ED',
         flex: 1,
       }}>
       <Header
@@ -38,20 +58,22 @@ const Cashier1 = ({navigation}) => {
       />
       <View
         style={{
-          height: hp('9%'),
-          width: wp('100%'),
+          height: hp('7%'),
+          width: wp('99%'),
           borderColor: 'grey',
           flexWrap: 'wrap',
           backgroundColor: 'white',
           marginTop: hp('0.1%'),
           borderTopWidth: wp('0.1%'),
           marginBottom: hp('0.5%'),
+          borderRadius: wp('2%'),
           elevation: 10,
+          alignSelf: 'center',
         }}>
         <View
           style={{
-            height: hp('9%'),
-            width: wp('60%'),
+            height: hp('7%'),
+            width: wp('70%'),
             borderColor: 'black',
             marginTop: -1.4,
             flexDirection: 'row',
@@ -59,26 +81,17 @@ const Cashier1 = ({navigation}) => {
           <Text
             style={{
               color: 'black',
-              fontSize: getFontSize(20),
-              marginTop: hp('3%'),
-              marginLeft: wp('13%'),
+              fontSize: getFontSize(24),
+              marginTop: hp('2%'),
+              marginHorizontal: wp('4.5%'),
               fontFamily: 'Rubik-Regular',
             }}>
             All Products
           </Text>
-          <DownIcon
-            name="keyboard-arrow-down"
-            size={27}
-            color="black"
-            style={{
-              marginTop: hp('3%'),
-              marginLeft: wp('1%'),
-            }}
-          />
         </View>
         <View
           style={{
-            height: hp('9%'),
+            height: hp('7%'),
             width: wp('13%'),
             flexWrap: 'wrap',
             marginTop: hp('0.1%'),
@@ -92,14 +105,14 @@ const Cashier1 = ({navigation}) => {
               style={{
                 margin: 10,
                 marginLeft: wp('4%'),
-                marginTop: hp('2.3%'),
+                marginTop: hp('1.5%'),
               }}
             />
           </TouchableOpacity>
         </View>
         <View
           style={{
-            height: hp('9%'),
+            height: hp('7%'),
             width: wp('14%'),
             marginTop: hp('0.3%'),
           }}>
@@ -111,112 +124,65 @@ const Cashier1 = ({navigation}) => {
               style={{
                 margin: 7,
                 marginLeft: wp('3%'),
-                marginTop: hp('1.8%'),
-              }}
-            />
-          </TouchableOpacity>
-        </View>
-        <View
-          style={{
-            height: hp('9%'),
-            width: wp('14%'),
-            marginTop: hp('0.3%'),
-          }}>
-          <TouchableOpacity>
-            <GridIcon
-              name="grid"
-              size={30}
-              color="black"
-              style={{
-                margin: 10,
-                marginLeft: wp('1.5%'),
-                marginTop: hp('2.1%'),
+                marginTop: hp('1%'),
               }}
             />
           </TouchableOpacity>
         </View>
       </View>
-
-      <ScrollView>
-        <View style={styles.middlecont}>
-          <View style={styles.cardouter}>
-            <View style={styles.fstcardcont}>
-              <Cardgrid
-                text={72.9}
-                title={'Salad Egg'}
-                img={require('../Screens/assets/images/EggSalad.png')}
-              />
-            </View>
-            <View style={styles.fstcardcont}>
-              <Cardgrid
-                text={20.5}
-                title={'Salad Tuna'}
-                img={require('../Screens/assets/images/tunasalad.png')}
-              />
-            </View>
-          </View>
-          <View style={styles.cardouter}>
-            <View style={styles.fstcardcont}>
-              <Cardgrid
-                text={12.5}
-                title={'Burger'}
-                img={require('../Screens/assets/images/burger.png')}
-              />
-            </View>
-            <View style={styles.fstcardcont}>
-              <Cardgrid
-                text={22.2}
-                title={'Stake'}
-                img={require('../Screens/assets/images/Steak.jpg')}
-              />
-            </View>
-          </View>
-
-          <View style={styles.cartcont}>
-            <TouchableOpacity style={styles.cartbutn}>
-              <CartBtn
-                text="(Count) Items     Total:(Bill)"
-                IconName="shopping-cart"
-                onPress={() => navigation.push('')}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
-      </ScrollView>
+      <FlatList
+        data={data}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+        showsVerticalScrollIndicator={false}
+        numColumns={2}
+      />
+      <View style={styles.cartcont}>
+        <TouchableOpacity style={styles.cartbutn}>
+          <CartBtn
+            text="(Count) Items     Total:(Bill)"
+            IconName="shopping-cart"
+            onPress={() => navigation.push()}
+          />
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
 // define your styles
 const styles = StyleSheet.create({
-  middlecont: {
-    height: hp('73%'),
-    width: wp('99%'),
-    backgroundColor: '#d3d3d3',
-    alignSelf: 'center',
+  listContainer: {
+    width: Dimensions.get('window').width / 2 - 20,
+    backgroundColor: 'white',
+    marginLeft: wp('3.2%'),
+    marginTop: hp('1%'),
+    borderRadius: wp('2%'),
   },
-  cardouter: {
-    width: wp('99%'),
-    height: hp('27%'),
-    backgroundColor: '#d3d3d3',
-    flexDirection: 'row',
-    alignSelf: 'center',
+  imageContainer: {
+    margin: wp('2'),
+    borderRadius: wp('3%'),
+    overflow: 'hidden',
   },
-  fstcardcont: {
-    height: hp('25%'),
-    width: wp('45%'),
-    backgroundColor: '#d3d3d3',
-    margin: wp('2%'),
-    marginLeft: wp('2.3%'),
+  image: {
+    width: undefined,
+    height: undefined,
+    aspectRatio: 1,
+  },
+  nametxt: {
+    color: 'black',
+    fontFamily: 'Rubik-Medium',
+    marginLeft: wp('3%'),
+  },
+  pricetxt: {
+    color: '#1A72DD',
+    fontFamily: 'Rubik-Medium',
+    marginLeft: wp('3%'),
   },
   cartcont: {
-    height: hp('18%'),
-    width: wp('95%'),
+    height: hp('7%'),
     borderRadius: wp('4%'),
     alignSelf: 'center',
-    backgroundColor: 'white',
     justifyContent: 'center',
-    marginTop: hp('1%'),
-    elevation: 10,
   },
 });
 

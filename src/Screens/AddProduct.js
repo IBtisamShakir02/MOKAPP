@@ -50,7 +50,7 @@ const Addproduct = ({navigation}) => {
 
   const data = [
     {key: '1', value: 'Salad'},
-    {key: '2', value: 'Stake'},
+    {key: '2', value: 'Steak'},
     {key: '3', value: 'Pasta'},
     {key: '4', value: 'Burger'},
     {key: '5', value: 'Drinks'},

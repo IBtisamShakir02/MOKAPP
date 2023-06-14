@@ -13,7 +13,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 // create a component
-const CartBtn = ({text, onPress, IconName}) => {
+const CartBtn = ({text, onPress, IconName, Height}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
   return (
@@ -26,12 +26,12 @@ const CartBtn = ({text, onPress, IconName}) => {
               color="white"
               size={25}
               style={{
-                marginHorizontal: wp('5%'),
-                marginVertical: hp('-0.2%'),
+                marginHorizontal: wp('4%'),
+                marginVertical: hp('-0.4%'),
               }}
             />
           ) : null}
-          <Text style={[styles.buttonText, {fontSize: getFontSize(16)}]}>
+          <Text style={[styles.buttonText, {fontSize: getFontSize(15)}]}>
             {' '}
             {text}{' '}
           </Text>
@@ -44,8 +44,8 @@ const CartBtn = ({text, onPress, IconName}) => {
 // define your styles
 const styles = StyleSheet.create({
   button: {
-    height: hp('8%'),
-    width: wp('80%'),
+    height: hp('6%'),
+    width: wp('75%'),
     borderRadius: 8,
     justifyContent: 'center',
     alignSelf: 'center',

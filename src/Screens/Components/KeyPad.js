@@ -10,18 +10,23 @@ import {
   PixelRatio,
 } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
 // create a component
-const KeyPad = () => {
+const KeyPad = ({CountBill}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
 
   const [Value, setValue] = useState('');
+  useEffect(() => {
+    if (CountBill) {
+      CountBill(Value);
+    }
+  }, [Value]);
   const handlePress = val => {
     if (val == 'C') {
       setValue('');
@@ -39,13 +44,12 @@ const KeyPad = () => {
         </Text>
         <View style={styles.ContField}>
           <Text style={[styles.Dollartxt, {fontSize: getFontSize(24)}]}>$</Text>
-            <TextInput
-              style={[styles.ContInput, {fontSize: getFontSize(24)}]}
-              placeholder="28.00"
-              placeholderTextColor={'#add8e6'}
-              keyboardType="number-pad">
-              {Value}
-            </TextInput>
+          <TextInput
+            style={[styles.ContInput, {fontSize: getFontSize(24)}]}
+            placeholder="28.00"
+            placeholderTextColor={'#add8e6'}
+            value={Value}
+            keyboardType="number-pad"></TextInput>
         </View>
       </View>
 
