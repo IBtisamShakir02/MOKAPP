@@ -13,25 +13,24 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 // create a component
-const CartBtn = ({text, onPress, IconName, Height}) => {
+const CartBtn = ({text, onPress, IconName, height}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
   return (
     <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
-      <View style={styles.button}>
+      <View style={[styles.button, {height}]}>
         <View style={{flexDirection: 'row'}}>
           {IconName ? (
             <Icon
               name={IconName}
               color="white"
-              size={25}
+              size={20}
               style={{
-                marginHorizontal: wp('4%'),
-                marginVertical: hp('-0.4%'),
+                marginRight: wp('3%'),
               }}
             />
           ) : null}
-          <Text style={[styles.buttonText, {fontSize: getFontSize(15)}]}>
+          <Text style={[styles.buttonText, {fontSize: getFontSize(18)}]}>
             {' '}
             {text}{' '}
           </Text>
@@ -44,16 +43,15 @@ const CartBtn = ({text, onPress, IconName, Height}) => {
 // define your styles
 const styles = StyleSheet.create({
   button: {
-    height: hp('6%'),
-    width: wp('75%'),
-    borderRadius: 8,
-    justifyContent: 'center',
+    width: wp('90%'),
+    borderRadius: wp('2%'),
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
     alignSelf: 'center',
     backgroundColor: '#1A72DD',
-    elevation: 20,
+    elevation: 5,
   },
   buttonText: {
-    flex: 1,
     color: 'white',
     textTransform: 'uppercase',
     fontFamily: 'Rubik-Medium',

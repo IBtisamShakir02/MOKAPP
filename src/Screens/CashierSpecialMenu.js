@@ -4,7 +4,6 @@ import {
   View,
   Text,
   StyleSheet,
-  ScrollView,
   PixelRatio,
   Dimensions,
   FlatList,
@@ -46,7 +45,7 @@ const SpecialMenu = ({navigation}) => {
     <SafeAreaView style={{backgroundColor: '#EBEEEE', flex: 1}}>
       <Header
         text={'Cashier'}
-        onPress={() => navigation.push('')}
+        onPress={() => navigation.push()}
         iconname={'menu-fold'}
       />
       <View style={styles.Cont1}>
@@ -67,6 +66,7 @@ const SpecialMenu = ({navigation}) => {
             text="(Count) Items     Total:(Bill)"
             IconName="shopping-cart"
             onPress={() => navigation.push('')}
+            height={50}
           />
         </View>
       </View>
@@ -78,15 +78,15 @@ const SpecialMenu = ({navigation}) => {
 const styles = StyleSheet.create({
   Cont1: {
     backgroundColor: 'white',
-    width: wp('99%'),
+    width: wp('100%'),
     height: hp('7%'),
     alignSelf: 'center',
     borderWidth: hp('0.1%'),
     borderColor: '#d3d3d3',
     justifyContent: 'center',
     marginBottom: hp('0.5%'),
-    elevation: 5,
-    borderRadius: wp('2%'),
+    elevation: 3,
+    borderRadius: wp('1%'),
   },
   Cont1txt: {
     color: 'black',

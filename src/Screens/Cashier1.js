@@ -59,15 +59,14 @@ const Cashier1 = ({navigation}) => {
       <View
         style={{
           height: hp('7%'),
-          width: wp('99%'),
+          width: wp('100%'),
           borderColor: 'grey',
           flexWrap: 'wrap',
           backgroundColor: 'white',
-          marginTop: hp('0.1%'),
           borderTopWidth: wp('0.1%'),
           marginBottom: hp('0.5%'),
-          borderRadius: wp('2%'),
-          elevation: 10,
+          borderRadius: wp('1%'),
+          elevation: 3,
           alignSelf: 'center',
         }}>
         <View
@@ -143,6 +142,7 @@ const Cashier1 = ({navigation}) => {
             text="(Count) Items     Total:(Bill)"
             IconName="shopping-cart"
             onPress={() => navigation.push()}
+            height={50}
           />
         </TouchableOpacity>
       </View>

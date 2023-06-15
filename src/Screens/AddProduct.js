@@ -152,6 +152,8 @@ const Addproduct = ({navigation}) => {
                 width: wp('22%'),
                 alignSelf: 'center',
                 borderRadius: 7,
+                borderWidth:wp('0.2%'),
+                borderColor:'black'
               }}
             />
           </TouchableOpacity>

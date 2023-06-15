@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -15,6 +16,7 @@ import SpecialMenu from './src/Screens/CashierSpecialMenu';
 import BottomNavigation from './src/Screens/Components/BottomNavigation';
 import ForgotPassword from './src/Screens/ForgotPassword';
 import AccountTab from './src/Screens/AccountTab';
+
 
 function App() {
   return (
@@ -72,7 +74,7 @@ function App() {
             headerShown: false,
           }}
         />
-
+        
         {/* Add Product */}
         <Stack.Screen
           name="AddProduct"

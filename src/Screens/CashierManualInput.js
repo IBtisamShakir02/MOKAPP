@@ -48,6 +48,7 @@ const CashierManualInput = ({navigation}) => {
               text="(Count) Items     Total:(Bill)"
               IconName="shopping-cart"
               onPress={() => navigation.push('PaymentMethod1')}
+              height={65}
             />
           </TouchableOpacity>
         </View>
@@ -66,13 +67,12 @@ const styles = StyleSheet.create({
   manualcont: {
     backgroundColor: 'white',
     height: hp('7%'),
-    width: wp('99%'),
+    width: wp('100%'),
     alignSelf: 'center',
-    borderRadius: wp('2%'),
+    borderRadius: wp('1%'),
     justifyContent: 'center',
     borderColor: '#d3d3d3',
-    marginTop: hp('0.8%'),
-    elevation: 5,
+    elevation: 3,
   },
   V1txt: {
     color: 'black',

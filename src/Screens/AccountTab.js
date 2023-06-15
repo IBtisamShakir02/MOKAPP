@@ -62,6 +62,7 @@ const AccountTab = ({navigation}) => {
                   marginLeft: wp('3%'),
                   borderWidth: wp('0.2%'),
                   borderRadius: 10,
+                  borderColor:'black'
                 }}
               />
             </TouchableOpacity>
