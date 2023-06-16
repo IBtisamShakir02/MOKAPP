@@ -1,5 +1,5 @@
-//import liraries
-import React, {Component} from 'react';
+import 'react-native-gesture-handler';
+import React from 'react';
 import {
   View,
   Text,
@@ -15,7 +15,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import Header from './Components/Header';
+// import Header from './Components/Header';
 import AddButton from '../Screens/Components/AddButton';
 import data from './Components/Data';
 
@@ -43,13 +43,13 @@ const SpecialMenu = ({navigation}) => {
   };
   return (
     <SafeAreaView style={{backgroundColor: '#EBEEEE', flex: 1}}>
-      <Header
+      {/* <Header
         text={'Cashier'}
         onPress={() => navigation.push()}
         iconname={'menu-fold'}
-      />
+      /> */}
       <View style={styles.Cont1}>
-        <Text style={[styles.Cont1txt, {fontSize: getFontSize(24)}]}>
+        <Text style={[styles.Cont1txt, {fontSize: getFontSize(20)}]}>
           Special Menu
         </Text>
       </View>
@@ -63,7 +63,7 @@ const SpecialMenu = ({navigation}) => {
         />
         <View style={styles.cartcont}>
           <CartBtn
-            text="(Count) Items     Total:(Bill)"
+            text="(Count) Items  Total:(Bill)"
             IconName="shopping-cart"
             onPress={() => navigation.push('')}
             height={50}
@@ -92,10 +92,11 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'left',
     marginHorizontal: hp('2%'),
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
+    marginTop: hp('-0.5%'),
   },
   middlecont: {
-    height: hp('76%'),
+    height: hp('79.5%'),
     width: wp('100%'),
     alignSelf: 'center',
     backgroundColor: '#E3E3E3ED',
@@ -120,12 +121,12 @@ const styles = StyleSheet.create({
   },
   nametxt: {
     color: 'black',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Regular',
     marginLeft: wp('3%'),
   },
   pricetxt: {
     color: '#1A72DD',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Regular',
     marginLeft: wp('3%'),
   },
   cartcont: {

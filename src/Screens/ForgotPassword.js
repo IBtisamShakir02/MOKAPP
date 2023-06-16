@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   fstconttxt: {
     color: 'darkgreen',
     textAlign: 'center',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
     marginTop: hp('5%'),
     marginLeft: wp('8%'),
     marginRight: wp('8%'),
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp('6%'),
     marginTop: hp('6%'),
     color: 'black',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
   },
 
   field: {
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     color: '#2A3256',
     height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
     elevation: 5,
     marginBottom: hp('5%'),
   },

@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     flex: 1,
     textTransform: 'uppercase',
     textAlign: 'center',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
   },
 });
 

@@ -65,16 +65,17 @@ const Addproduct = ({navigation}) => {
   ];
 
   return (
-      <SafeAreaView style={{
+    <SafeAreaView
+      style={{
         backgroundColor: 'white',
         flex: 1,
       }}>
-        <Header
-          text={'Add Product'}
-          iconname={'arrowleft'}
-          onPress={() => navigation.push('LogInOwner')}
-        />
-        <ScrollView>
+      <Header
+        text={'Add Product'}
+        iconname={'arrowleft'}
+        onPress={() => navigation.push('LogInOwner')}
+      />
+      <ScrollView>
         <View>
           <Text style={[styles.Detailstxt, {fontSize: getfontSize(23)}]}>
             Product Details:
@@ -101,7 +102,7 @@ const Addproduct = ({navigation}) => {
 
         <View>
           <Text style={[styles.Detailstxt, {fontSize: getfontSize(22)}]}>
-            Add Type Price
+            Add Type Price:
           </Text>
         </View>
 
@@ -152,8 +153,8 @@ const Addproduct = ({navigation}) => {
                 width: wp('22%'),
                 alignSelf: 'center',
                 borderRadius: 7,
-                borderWidth:wp('0.2%'),
-                borderColor:'black'
+                borderWidth: wp('0.2%'),
+                borderColor: 'black',
               }}
             />
           </TouchableOpacity>
@@ -188,13 +189,13 @@ const Addproduct = ({navigation}) => {
             inputStyles={{
               color: 'black',
               fontSize: getfontSize(19),
-              fontFamily: 'Rubik-Regular',
+              fontFamily: 'Roboto-Regular',
             }}
             dropdownTextStyles={{
               color: 'black',
               fontSize: getfontSize(15),
               textAlign: 'center',
-              fontFamily: 'Rubik-Regular',
+              fontFamily: 'Roboto-Regular',
             }}
             dropdownStyles={{
               width: wp('90%'),
@@ -264,13 +265,13 @@ const Addproduct = ({navigation}) => {
             inputStyles={{
               color: 'black',
               fontSize: getfontSize(19),
-              fontFamily: 'Rubik-Regular',
+              fontFamily: 'Roboto-Regular',
             }}
             dropdownTextStyles={{
               color: 'black',
               fontSize: getfontSize(15),
               textAlign: 'center',
-              fontFamily: 'Rubik-Regular',
+              fontFamily: 'Roboto-Regular',
             }}
             dropdownStyles={{
               width: wp('90%'),
@@ -297,8 +298,8 @@ const Addproduct = ({navigation}) => {
             />
           </TouchableOpacity>
         </View>
-        </ScrollView>
-      </SafeAreaView>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
@@ -309,11 +310,11 @@ const styles = StyleSheet.create({
     marginTop: hp('2.5%'),
     marginLeft: wp('5%'),
     marginBottom: hp('0.7%'),
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
   },
   Nametxt: {
     color: 'black',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
     marginStart: wp('5%'),
     marginTop: hp('2.5%'),
   },
@@ -324,7 +325,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: hp('0.8%'),
     backgroundColor: '#EBEEEE',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
     color: '#2A3256',
     height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
@@ -341,7 +342,7 @@ const styles = StyleSheet.create({
 
   Typeviewtxt: {
     color: 'black',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
     marginLeft: wp('5%'),
     marginTop: hp('2.3%'),
   },
@@ -354,7 +355,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: hp('1.5%'),
     backgroundColor: '#EBEEEE',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
     color: '#2A3256',
     height: hp('6.5%'),
     paddingHorizontal: wp('4%'),
@@ -383,8 +384,8 @@ const styles = StyleSheet.create({
   Butntxt: {
     color: 'white',
     textAlign: 'center',
-    marginTop: hp('1.5%'),
-    fontFamily: 'Rubik-Medium',
+    marginTop: hp('1.3%'),
+    fontFamily: 'Roboto-Medium',
   },
 });
 

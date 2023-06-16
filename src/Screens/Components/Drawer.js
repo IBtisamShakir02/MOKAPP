@@ -1,25 +1,39 @@
 //import liraries
-import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import React from 'react';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {widthPercentageToDP} from 'react-native-responsive-screen';
+import BottomNavigation from './BottomNavigation';
+import AccountTab from '../AccountTab';
+
+const Drawer = createDrawerNavigator();
 
 // create a component
-const DrawerTab = () => {
+const DrawerNav = () => {
   return (
-    <View style={styles.container}>
-      <Text>DrawerTab</Text>
-    </View>
+    <Drawer.Navigator
+      screenOptions={{
+        drawerStyle: {
+          width: widthPercentageToDP('60%'),
+          backgroundColor: 'white',
+        },
+      }}>
+      <Drawer.Screen
+        name="Cashier"
+        component={BottomNavigation}
+        options={{
+          headerShown: true,
+          headerTitleAlign: 'center',
+          headerTintColor: '#1A72DD',
+        }}
+      />
+      <Drawer.Screen
+        name="Account"
+        component={AccountTab}
+        options={{headerShown: false}}
+      />
+    </Drawer.Navigator>
   );
 };
 
-// define your styles
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#2c3e50',
-  },
-});
-
 //make this component available to the app
-export default DrawerTab;
+export default DrawerNav;

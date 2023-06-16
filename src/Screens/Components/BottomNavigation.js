@@ -1,7 +1,7 @@
 //import liraries
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Cashier1 from '../Cashier1';
+import CashierManager from '../CashierManager';
 import CashierSpecialMenu from '../CashierSpecialMenu';
 import CashierManualInput from '../CashierManualInput';
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -25,14 +25,14 @@ const BottomNavigation = () => {
         tabBarStyle: {
           borderTopLeftRadius: wp('3%'),
           borderTopRightRadius: wp('3%'),
-          height: hp('8%'),
+          height: hp('6%'),
           backgroundColor: 'white',
         },
         tabBarHideOnKeyboard: true,
       }}>
       <Tab.Screen
         name="Cashier"
-        component={Cashier1}
+        component={CashierManager}
         options={{
           tabBarIcon: ({color}) => (
             <MaterialIcons name="food-outline" color={color} size={30} />

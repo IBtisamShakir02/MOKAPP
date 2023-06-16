@@ -79,7 +79,7 @@ const LogInOwner = ({navigation}) => {
             secureTextEntry
           />
 
-          <Text style={[styles.otptxt, {fontSize: getFontSize(20)}]}>
+          <Text style={[styles.otptxt, {fontSize: getFontSize(18)}]}>
             Send OTP:
           </Text>
 
@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   fstconttxt: {
     color: 'darkgreen',
     textAlign: 'center',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
   },
 
   text: {
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp('6%'),
     marginTop: hp('4%'),
     color: 'black',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
   },
 
   field: {
@@ -161,14 +161,14 @@ const styles = StyleSheet.create({
     color: '#2A3256',
     height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
     elevation: 5,
   },
   otptxt: {
     color: 'black',
     margin: 25,
-    marginBottom: hp('5%'),
-    fontFamily: 'Rubik-Medium',
+    marginBottom: hp('4%'),
+    fontFamily: 'Roboto-Medium',
   },
   btncont1: {
     flexDirection: 'row',
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: hp('1%'),
     textDecorationLine: 'underline',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
   },
 });
 

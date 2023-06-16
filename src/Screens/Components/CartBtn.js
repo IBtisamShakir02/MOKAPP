@@ -26,11 +26,12 @@ const CartBtn = ({text, onPress, IconName, height}) => {
               color="white"
               size={20}
               style={{
-                marginRight: wp('3%'),
+                marginRight: wp('1%'),
+                marginTop: hp('0.1%'),
               }}
             />
           ) : null}
-          <Text style={[styles.buttonText, {fontSize: getFontSize(18)}]}>
+          <Text style={[styles.buttonText, {fontSize: getFontSize(16)}]}>
             {' '}
             {text}{' '}
           </Text>
@@ -43,7 +44,7 @@ const CartBtn = ({text, onPress, IconName, height}) => {
 // define your styles
 const styles = StyleSheet.create({
   button: {
-    width: wp('90%'),
+    width: wp('65.5%'),
     borderRadius: wp('2%'),
     alignItems: 'center',
     justifyContent: 'space-evenly',
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     textTransform: 'uppercase',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
   },
 });
 

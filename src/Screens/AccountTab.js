@@ -47,7 +47,7 @@ const AccountTab = ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <Header
         text={'Accounts'}
-        onPress={() => navigation.push('Listproduct')}
+        onPress={() => navigation.push('CashManager')}
         iconname={'arrowleft'}
       />
       <View>

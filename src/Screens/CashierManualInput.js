@@ -15,7 +15,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Header from './Components/Header';
+// import Header from './Components/Header';
 
 // create a component
 const CashierManualInput = ({navigation}) => {
@@ -25,13 +25,13 @@ const CashierManualInput = ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="white" barStyle="dark-content" />
       <View style={{alignSelf: 'center'}}>
-        <Header
+        {/* <Header
           text={'Cashier'}
           onPress={() => navigation.push('')}
           iconname={'menu-fold'}
-        />
+        /> */}
         <View style={styles.manualcont}>
-          <Text style={[styles.V1txt, {fontSize: getFontSize(24)}]}>
+          <Text style={[styles.V1txt, {fontSize: getFontSize(20)}]}>
             Manual Input
           </Text>
         </View>
@@ -45,10 +45,10 @@ const CashierManualInput = ({navigation}) => {
               marginBottom: hp('1%'),
             }}>
             <CartBtn
-              text="(Count) Items     Total:(Bill)"
+              text="(Count) Items  Total:(Bill)"
               IconName="shopping-cart"
               onPress={() => navigation.push('PaymentMethod1')}
-              height={65}
+              height={55}
             />
           </TouchableOpacity>
         </View>
@@ -78,14 +78,17 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'left',
     marginHorizontal: wp('4.5%'),
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
   },
   cartview: {
-    height: hp('14%'),
+    height: hp('16.5%'),
     width: wp('98%'),
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'white',
+    borderRadius: wp('3%'),
+    elevation: 5,
   },
   keypadview: {
     height: hp('63%'),

@@ -39,7 +39,7 @@ const KeyPad = ({CountBill}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={styles.Conta}>
-        <Text style={[styles.ContaTxt, {fontSize: getFontSize(24)}]}>
+        <Text style={[styles.ContaTxt, {fontSize: getFontSize(20)}]}>
           Input Price
         </Text>
         <View style={styles.ContField}>
@@ -59,7 +59,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('1')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               1
             </Text>
           </TouchableOpacity>
@@ -67,7 +67,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('4')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               4
             </Text>
           </TouchableOpacity>
@@ -75,7 +75,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('7')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               7
             </Text>
           </TouchableOpacity>
@@ -83,7 +83,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('C')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               C
             </Text>
           </TouchableOpacity>
@@ -93,7 +93,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('2')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               2
             </Text>
           </TouchableOpacity>
@@ -101,7 +101,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('5')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               5
             </Text>
           </TouchableOpacity>
@@ -109,7 +109,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('8')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               8
             </Text>
           </TouchableOpacity>
@@ -117,7 +117,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('0')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               0
             </Text>
           </TouchableOpacity>
@@ -127,7 +127,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('3')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               3
             </Text>
           </TouchableOpacity>
@@ -135,7 +135,7 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('6')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               6
             </Text>
           </TouchableOpacity>
@@ -143,15 +143,15 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn}
             activeOpacity={0.8}
             onPress={() => handlePress('9')}>
-            <Text style={[styles.calbtntxt, {fontSize: getFontSize(40)}]}>
+            <Text style={[styles.calbtntxt, {fontSize: getFontSize(35)}]}>
               9
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            style={styles.calbtn}
+            style={styles.dotcont}
             activeOpacity={0.8}
             onPress={() => handlePress('.')}>
-            <Text style={[styles.Dot, {fontSize: getFontSize(46)}]}>.</Text>
+            <Text style={[styles.Dot, {fontSize: getFontSize(40)}]}>.</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.cal2}>
@@ -159,12 +159,12 @@ const KeyPad = ({CountBill}) => {
             style={styles.calbtn2}
             activeOpacity={0.8}
             onPress={() => handlePress('Back')}>
-            <Feather name="delete" size={50} color={'#1A72DD'} />
+            <Feather name="delete" size={40} color={'#1A72DD'} />
           </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.8}
             style={[styles.calbtn2, {backgroundColor: '#1A72DD'}]}>
-            <Text style={[styles.calbtntxt2, {fontSize: getFontSize(31)}]}>
+            <Text style={[styles.calbtntxt2, {fontSize: getFontSize(25)}]}>
               Enter
             </Text>
           </TouchableOpacity>
@@ -193,7 +193,7 @@ const styles = StyleSheet.create({
     marginLeft: wp('4%'),
     marginBottom: hp('2%'),
     fontWeight: '400',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
   },
   ContField: {
     height: hp('7%'),
@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
     marginLeft: wp('5%'),
     alignSelf: 'center',
     justifyContent: 'center',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
   },
   ContInput: {
     width: wp('84%'),
@@ -219,8 +219,8 @@ const styles = StyleSheet.create({
     color: '#1A72DD',
     justifyContent: 'center',
     alignSelf: 'center',
-    fontFamily: 'Rubik-Medium',
-    marginTop: hp('0.4%'),
+    fontFamily: 'Roboto-Regular',
+    marginTop: hp('0.3%'),
   },
   calcont: {
     height: hp('42%'),
@@ -249,14 +249,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     elevation: 10,
   },
+  dotcont: {
+    height: hp('9.3%'),
+    width: wp('22.5%'),
+    backgroundColor: 'white',
+    borderColor: '#d3d3d3',
+    borderWidth: wp('0.2%'),
+    borderRadius: wp('4%'),
+    alignSelf: 'center',
+    marginTop: hp('0.8%'),
+    marginLeft: hp('0.5%'),
+    elevation: 10,
+  },
   calbtntxt: {
     color: 'black',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
   },
   Dot: {
     color: 'black',
     fontWeight: '900',
-    marginBottom: hp('3%'),
+    marginLeft: wp('10%'),
   },
   calbtn2: {
     height: hp('18.3%'),
@@ -279,7 +291,7 @@ const styles = StyleSheet.create({
   },
   calbtntxt2: {
     color: 'white',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Regular',
   },
 });
 

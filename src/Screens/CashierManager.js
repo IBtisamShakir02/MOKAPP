@@ -13,18 +13,17 @@ import {
 } from 'react-native';
 import SearchIcon from 'react-native-vector-icons/Ionicons';
 import BarcodeIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import GridIcon from 'react-native-vector-icons/Feather';
 import data from './Components/Data';
-import AddButton from '../Screens/Components/AddButton';
+import AddButton from './Components/AddButton';
 import CartBtn from './Components/CartBtn';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Header from './Components/Header';
+// import Header from './Components/Header';
 
 // create a component
-const Cashier1 = ({navigation}) => {
+const CashierManager = ({navigation}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
   const renderItem = ({item}) => {
@@ -51,19 +50,17 @@ const Cashier1 = ({navigation}) => {
         backgroundColor: '#E3E3E3ED',
         flex: 1,
       }}>
-      <Header
+      {/* <Header
         text={'Cashier'}
-        onPress={() => navigation.push('')}
+        onPress={() => navigation.push('DrawerNav')}
         iconname={'menu-fold'}
-      />
+      /> */}
       <View
         style={{
           height: hp('7%'),
           width: wp('100%'),
-          borderColor: 'grey',
           flexWrap: 'wrap',
           backgroundColor: 'white',
-          borderTopWidth: wp('0.1%'),
           marginBottom: hp('0.5%'),
           borderRadius: wp('1%'),
           elevation: 3,
@@ -74,16 +71,16 @@ const Cashier1 = ({navigation}) => {
             height: hp('7%'),
             width: wp('70%'),
             borderColor: 'black',
-            marginTop: -1.4,
             flexDirection: 'row',
+            backgroundColor: 'white',
           }}>
           <Text
             style={{
               color: 'black',
-              fontSize: getFontSize(24),
-              marginTop: hp('2%'),
+              fontSize: getFontSize(20),
+              marginTop: hp('1.7%'),
               marginHorizontal: wp('4.5%'),
-              fontFamily: 'Rubik-Regular',
+              fontFamily: 'Roboto-Regular',
             }}>
             All Products
           </Text>
@@ -93,8 +90,8 @@ const Cashier1 = ({navigation}) => {
             height: hp('7%'),
             width: wp('13%'),
             flexWrap: 'wrap',
-            marginTop: hp('0.1%'),
             marginLeft: wp('-0.5%'),
+            backgroundColor: 'white',
           }}>
           <TouchableOpacity>
             <SearchIcon
@@ -103,7 +100,7 @@ const Cashier1 = ({navigation}) => {
               color="black"
               style={{
                 margin: 10,
-                marginLeft: wp('4%'),
+                marginLeft: wp('3%'),
                 marginTop: hp('1.5%'),
               }}
             />
@@ -113,7 +110,7 @@ const Cashier1 = ({navigation}) => {
           style={{
             height: hp('7%'),
             width: wp('14%'),
-            marginTop: hp('0.3%'),
+            backgroundColor: 'white',
           }}>
           <TouchableOpacity>
             <BarcodeIcon
@@ -122,8 +119,8 @@ const Cashier1 = ({navigation}) => {
               color="black"
               style={{
                 margin: 7,
-                marginLeft: wp('3%'),
-                marginTop: hp('1%'),
+                marginLeft: wp('2.5%'),
+                marginTop: hp('1.2%'),
               }}
             />
           </TouchableOpacity>
@@ -139,7 +136,7 @@ const Cashier1 = ({navigation}) => {
       <View style={styles.cartcont}>
         <TouchableOpacity style={styles.cartbutn}>
           <CartBtn
-            text="(Count) Items     Total:(Bill)"
+            text="(Count) Items  Total:(Bill)"
             IconName="shopping-cart"
             onPress={() => navigation.push()}
             height={50}
@@ -170,12 +167,12 @@ const styles = StyleSheet.create({
   },
   nametxt: {
     color: 'black',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Regular',
     marginLeft: wp('3%'),
   },
   pricetxt: {
     color: '#1A72DD',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Regular',
     marginLeft: wp('3%'),
   },
   cartcont: {
@@ -187,4 +184,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default Cashier1;
+export default CashierManager;

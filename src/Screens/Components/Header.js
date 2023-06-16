@@ -24,16 +24,16 @@ const Header = ({text, onPress, iconname}) => {
             activeOpacity={0.2}
             onPress={onPress}
             style={{
-              marginTop: heightPercentageToDP('2.3%'),
-              marginLeft: widthPercentageToDP('3.5%'),
+              marginTop: heightPercentageToDP('2.6%'),
+              marginLeft: widthPercentageToDP('4%'),
             }}>
             {iconname ? (
-              <Arrowleft name={iconname} size={25} color="#1A72DD" />
+              <Arrowleft name={iconname} size={22} color="#1A72DD" />
             ) : null}
           </TouchableOpacity>
         </View>
         <View style={styles.textview}>
-          <Text style={[styles.txt, {fontSize: getFontSize(30)}]}>{text}</Text>
+          <Text style={[styles.txt, {fontSize: getFontSize(23)}]}>{text}</Text>
         </View>
       </View>
     </SafeAreaView>
@@ -48,9 +48,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   txt: {
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
     color: '#1A72DD',
-    marginTop: heightPercentageToDP('1.5%'),
+    marginTop: heightPercentageToDP('1.7%'),
     textAlign: 'center',
   },
   textview: {

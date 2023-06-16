@@ -40,7 +40,7 @@ const LogIn = ({navigation}) => {
             style={{
               color: 'black',
               fontSize: getFontSize(19),
-              fontFamily: 'Rubik-Regular',
+              fontFamily: 'Roboto-Regular',
             }}>
             Select Login as Owner or as Employee to Continue.
           </Text>
@@ -78,7 +78,7 @@ const LogIn = ({navigation}) => {
               textAlign: 'center',
               fontSize: getFontSize(18),
               marginBottom: hp('0.3%'),
-              fontFamily: 'Rubik-Medium',
+              fontFamily: 'Roboto-Medium',
             }}>
             or
           </Text>
@@ -102,8 +102,8 @@ const LogIn = ({navigation}) => {
             style={{
               color: 'black',
               textAlign: 'center',
-              fontSize: getFontSize(16),
-              fontFamily: 'Rubik-Regular',
+              fontSize: getFontSize(17),
+              fontFamily: 'Roboto-Regular',
             }}>
             Don't have an Account?
           </Text>
@@ -116,7 +116,7 @@ const LogIn = ({navigation}) => {
                 textAlign: 'center',
                 fontSize: getFontSize(20),
                 textDecorationLine: 'underline',
-                fontFamily: 'Rubik-Medium',
+                fontFamily: 'Roboto-Medium',
               }}>
               SignUp
             </Text>
@@ -131,9 +131,8 @@ const LogIn = ({navigation}) => {
 const styles = StyleSheet.create({
   cont1txt: {
     alignSelf: 'center',
-    paddingTop: hp('0.5%'),
     color: 'black',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
   },
   fstcont: {
     height: hp('5.5%'),
@@ -153,15 +152,15 @@ const styles = StyleSheet.create({
     height: hp('43%'),
     width: wp('98%'),
     alignSelf: 'center',
-    alignItems:'center',
-    justifyContent:'center'
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   thrdcont: {
     backgroundColor: 'white',
     height: hp('20%'),
     width: wp('100%'),
     alignSelf: 'center',
-    marginTop:hp('2%'),
+    marginTop: hp('2%'),
   },
   forthcont: {
     backgroundColor: 'white',

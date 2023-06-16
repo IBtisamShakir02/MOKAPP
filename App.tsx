@@ -1,4 +1,3 @@
-import 'react-native-gesture-handler';
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -13,10 +12,9 @@ import ListProduct from './src/Screens/Listproduct';
 import CashierManualInput from './src/Screens/CashierManualInput';
 import PaymentMethod1 from './src/Screens/PaymentMethodInput';
 import SpecialMenu from './src/Screens/CashierSpecialMenu';
-import BottomNavigation from './src/Screens/Components/BottomNavigation';
 import ForgotPassword from './src/Screens/ForgotPassword';
 import AccountTab from './src/Screens/AccountTab';
-
+import DrawerNav from './src/Screens/Components/Drawer';
 
 function App() {
   return (
@@ -30,7 +28,6 @@ function App() {
           }}
         />
 
-        {/* Create Account */}
         <Stack.Screen
           name="CreateAccount"
           component={createaccount}
@@ -39,7 +36,6 @@ function App() {
           }}
         />
 
-        {/* LogIn */}
         <Stack.Screen
           name="SignIn"
           component={LogIn}
@@ -48,7 +44,6 @@ function App() {
           }}
         />
 
-        {/* LogIn Employee */}
         <Stack.Screen
           name="LoginEmp"
           component={LogInEmployee}
@@ -57,7 +52,6 @@ function App() {
           }}
         />
 
-        {/* LogIn Owner */}
         <Stack.Screen
           name="LogInOwner"
           component={LogInOwner}
@@ -66,16 +60,14 @@ function App() {
           }}
         />
 
-        {/* Cashier */}
         <Stack.Screen
-          name="Cashier1"
-          component={BottomNavigation}
+          name="CashManager"
+          component={DrawerNav}
           options={{
             headerShown: false,
           }}
         />
-        
-        {/* Add Product */}
+
         <Stack.Screen
           name="AddProduct"
           component={Addproduct}
@@ -84,7 +76,6 @@ function App() {
           }}
         />
 
-        {/* List Product */}
         <Stack.Screen
           name="Listproduct"
           component={ListProduct}
@@ -93,7 +84,6 @@ function App() {
           }}
         />
 
-        {/* Cashier Special Menu */}
         <Stack.Screen
           name="CashierSpecialMenu"
           component={SpecialMenu}
@@ -102,7 +92,6 @@ function App() {
           }}
         />
 
-        {/* Cashier Manual Input */}
         <Stack.Screen
           name="CashierManIn"
           component={CashierManualInput}
@@ -111,7 +100,6 @@ function App() {
           }}
         />
 
-        {/* Payment Method */}
         <Stack.Screen
           name="PaymentMethod1"
           component={PaymentMethod1}

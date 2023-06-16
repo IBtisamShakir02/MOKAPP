@@ -63,7 +63,7 @@ const ListProduct = ({navigation}) => {
                   style={{
                     color: 'black',
                     fontSize: getFontSize(21),
-                    fontFamily: 'Rubik-Medium',
+                    fontFamily: 'Roboto-Medium',
                     marginTop: hp('1.3%'),
                   }}>
                   $27.99
@@ -87,7 +87,7 @@ const ListProduct = ({navigation}) => {
                   style={{
                     color: 'black',
                     fontSize: getFontSize(21),
-                    fontFamily: 'Rubik-Medium',
+                    fontFamily: 'Roboto-Medium',
                     marginTop: hp('1.3%'),
                   }}>
                   $27.99
@@ -111,7 +111,7 @@ const ListProduct = ({navigation}) => {
                   style={{
                     color: 'black',
                     fontSize: getFontSize(21),
-                    fontFamily: 'Rubik-Medium',
+                    fontFamily: 'Roboto-Medium',
                     marginTop: hp('1.3%'),
                   }}>
                   $27.99
@@ -135,7 +135,7 @@ const ListProduct = ({navigation}) => {
                   style={{
                     color: 'black',
                     fontSize: getFontSize(21),
-                    fontFamily: 'Rubik-Medium',
+                    fontFamily: 'Roboto-Medium',
                     marginTop: hp('1.3%'),
                   }}>
                   $27.99
@@ -152,7 +152,7 @@ const ListProduct = ({navigation}) => {
               text="Add New Product"
               backgroundColor={'#1A72DD'}
               color={'white'}
-              onPress={() => navigation.push('AccountTab')}
+              onPress={() => navigation.push()}
               IconName=""
             />
           </TouchableOpacity>
@@ -201,18 +201,18 @@ const styles = StyleSheet.create({
   },
   btnTxt: {
     color: 'black',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
   },
   smlfnt: {
     color: 'black',
     fontWeight: '400',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
   },
   txtinpt: {
     width: wp('83%'),
     backgroundColor: 'white',
     height: hp('7%'),
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
     color: 'black',
     marginTop: hp('0.8%'),
     paddingHorizontal: wp('5%'),
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
   Deltxt: {
     color: '#FF0307',
     marginLeft: wp('1%'),
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
   },
 });
 

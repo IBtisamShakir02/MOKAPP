@@ -23,7 +23,7 @@ const HelloScreen = ({navigation}) => {
       <StatusBar backgroundColor="white" barStyle="dark-content" />
 
       <View style={{marginTop: hp('3%')}}>
-        <Text style={[styles.welcometxt, {fontSize: getFontSize(70)}]}>
+        <Text style={[styles.welcometxt, {fontSize: getFontSize(60)}]}>
           MOKPOS
         </Text>
         <View
@@ -99,9 +99,9 @@ const styles = StyleSheet.create({
   welcometxt: {
     color: '#1A72DD',
     textAlign: 'center',
-    marginTop: hp('8%'),
+    marginTop: hp('7%'),
     marginBottom: hp('1%'),
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
   },
   recimgview: {
     alignItems: 'center',
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   smltxt: {
     color: 'black',
     textAlign: 'center',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Regular',
     marginTop: hp('1%'),
   },
   img: {

@@ -47,7 +47,7 @@ const CreateAccount = ({navigation}) => {
               color: 'darkgreen',
               fontSize: getFontSize(20),
               textAlign: 'center',
-              fontFamily: 'Rubik-Regular',
+              fontFamily: 'Roboto-Regular',
             }}>
             Note: Must Fill all the Fields in order to Create your Account !
           </Text>
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: hp('2%'),
     color: 'black',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Roboto-Medium',
     marginHorizontal: wp('5%'),
   },
 
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     color: '#2A3256',
     height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
     elevation: 5,
     alignSelf: 'center',
   },

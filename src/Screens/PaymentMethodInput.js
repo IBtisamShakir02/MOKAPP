@@ -28,12 +28,12 @@ const PaymentMethod1 = ({navigation}) => {
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <Header
         text={'Payment Method'}
-        onPress={() => navigation.push('')}
-        iconname={'menu-fold'}
+        onPress={() => navigation.push('CashManager')}
+        iconname={'arrowleft'}
       />
       <View style={{backgroundColor: 'white'}}>
         <View style={styles.Cont1}>
-          <Text style={[styles.Cont1txt, {fontSize: getFontSize(24)}]}>
+          <Text style={[styles.Cont1txt, {fontSize: getFontSize(19)}]}>
             Total Bill:
           </Text>
           <Text
@@ -41,8 +41,8 @@ const PaymentMethod1 = ({navigation}) => {
               styles.Cont1txt,
               {
                 color: '#1A72DD',
-                fontSize: getFontSize(29),
-                fontFamily: 'Rubik-Medium',
+                fontSize: getFontSize(25),
+                fontFamily: 'Roboto-Medium',
               },
             ]}>
             ${Count ? Count : ''}
@@ -62,7 +62,7 @@ const PaymentMethod1 = ({navigation}) => {
               },
             ]}>
             <TouchableOpacity>
-              <Text style={[styles.Cont2txt, {fontSize: getFontSize(25)}]}>
+              <Text style={[styles.Cont2txt, {fontSize: getFontSize(22)}]}>
                 Cash
               </Text>
             </TouchableOpacity>
@@ -80,7 +80,7 @@ const PaymentMethod1 = ({navigation}) => {
               },
             ]}>
             <TouchableOpacity>
-              <Text style={[styles.Cont2txt, {fontSize: getFontSize(25)}]}>
+              <Text style={[styles.Cont2txt, {fontSize: getFontSize(22)}]}>
                 Non-Cash
               </Text>
             </TouchableOpacity>
@@ -89,7 +89,7 @@ const PaymentMethod1 = ({navigation}) => {
         <View style={styles.Cont3}>
           <Wallet
             name="wallet"
-            size={25}
+            size={20}
             color={'black'}
             style={{alignSelf: 'center', marginStart: wp('29%')}}
           />
@@ -99,8 +99,8 @@ const PaymentMethod1 = ({navigation}) => {
               {
                 fontWeight: '400',
                 marginLeft: wp('1.5%'),
-                fontSize: getFontSize(25),
-                marginTop: hp('0.5%'),
+                fontSize: getFontSize(22),
+                marginTop: hp('0.3%'),
               },
             ]}>
             Exact Amount
@@ -130,13 +130,13 @@ const styles = StyleSheet.create({
   },
   Cont1txt: {
     color: 'black',
-    fontFamily: 'Rubik-Regular',
+    fontFamily: 'Roboto-Regular',
     textAlign: 'left',
     marginHorizontal: wp('4%'),
   },
   Cont2txt: {
     color: 'black',
-    fontFamily: 'Rubik-Medium',
+    fontFamily: 'Rubik-Regular',
     textAlign: 'center',
   },
   Cont3: {
