@@ -26,7 +26,7 @@ const Addproduct = ({navigation}) => {
   const fontScale = PixelRatio.getFontScale();
   const getfontSize = size => size / fontScale;
 
-  const [Selected, setSelected] = useState('');
+  const [Selected, setSelected] = useState('Selected');
   const [cameraPhoto, setcameraPhoto] = useState();
   const [galleryPhoto, setgalleryPhoto] = useState();
 
@@ -177,18 +177,19 @@ const Addproduct = ({navigation}) => {
             data={data}
             save="value"
             boxStyles={{
-              height: hp('7%'),
+              height: hp('6%'),
               borderRadius: 5,
-              width: wp('90%'),
+              width: wp('85%'),
               alignSelf: 'center',
               marginTop: hp('2%'),
               backgroundColor: '#EBEEEE',
               elevation: 3,
               alignItems: 'center',
+              borderColor: '#E3E3E3DE',
             }}
             inputStyles={{
               color: 'black',
-              fontSize: getfontSize(19),
+              fontSize: getfontSize(17),
               fontFamily: 'Roboto-Regular',
             }}
             dropdownTextStyles={{
@@ -198,12 +199,13 @@ const Addproduct = ({navigation}) => {
               fontFamily: 'Roboto-Regular',
             }}
             dropdownStyles={{
-              width: wp('90%'),
-              marginLeft: wp('5%'),
+              width: wp('85%'),
+              alignSelf: 'center',
               height: hp('27%'),
               backgroundColor: '#EBEEEE',
               elevation: 3,
               marginBottom: hp('-3%'),
+              borderColor: '#E3E3E3DE',
             }}
             defaultOption={{key: '1', value: 'Salad'}}
           />
@@ -253,18 +255,19 @@ const Addproduct = ({navigation}) => {
             data={data1}
             save="value"
             boxStyles={{
-              height: hp('7%'),
+              height: hp('6%'),
               borderRadius: 5,
-              width: wp('90%'),
+              width: wp('85%'),
               alignSelf: 'center',
               marginTop: hp('2%'),
               backgroundColor: '#EBEEEE',
               elevation: 3,
               alignItems: 'center',
+              borderColor: '#E3E3E3DE',
             }}
             inputStyles={{
               color: 'black',
-              fontSize: getfontSize(19),
+              fontSize: getfontSize(17),
               fontFamily: 'Roboto-Regular',
             }}
             dropdownTextStyles={{
@@ -274,12 +277,13 @@ const Addproduct = ({navigation}) => {
               fontFamily: 'Roboto-Regular',
             }}
             dropdownStyles={{
-              width: wp('90%'),
-              marginLeft: wp('5%'),
+              width: wp('85%'),
+              alignSelf: 'center',
               height: hp('27%'),
               backgroundColor: '#EBEEEE',
               elevation: 3,
               marginBottom: hp('-3%'),
+              borderColor: '#E3E3E3DE',
             }}
             defaultOption={{key: 'a', value: 'Islamabad'}}
           />
@@ -321,20 +325,20 @@ const styles = StyleSheet.create({
   field: {
     borderColor: 'white',
     borderRadius: 2,
-    width: wp('90%'),
+    width: wp('85%'),
     alignSelf: 'center',
     marginTop: hp('0.8%'),
     backgroundColor: '#EBEEEE',
     fontFamily: 'Roboto-Regular',
     color: '#2A3256',
-    height: hp('6.5%'),
+    height: hp('5.5%'),
     paddingHorizontal: wp('5%'),
     elevation: 5,
   },
   Typeview: {
     backgroundColor: '#EBEEEE',
     width: wp('90%'),
-    height: hp('45%'),
+    height: hp('41%'),
     alignSelf: 'center',
     borderRadius: wp('5%'),
     marginTop: hp('0.7%'),
@@ -348,7 +352,7 @@ const styles = StyleSheet.create({
   },
 
   Typefiled: {
-    borderColor: 'black',
+    borderColor: '#E3E3E3DE',
     borderWidth: wp('0.1%'),
     borderRadius: wp('1.5%'),
     width: wp('80%'),
@@ -357,9 +361,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#EBEEEE',
     fontFamily: 'Roboto-Regular',
     color: '#2A3256',
-    height: hp('6.5%'),
+    height: hp('5.5%'),
     paddingHorizontal: wp('4%'),
-    elevation: 5,
+    elevation: 3,
   },
   Picview: {
     backgroundColor: 'white',

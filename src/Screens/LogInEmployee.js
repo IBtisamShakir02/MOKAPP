@@ -28,7 +28,7 @@ const LogInEmployee = ({navigation}) => {
 
   const Submit = () => {
     if (code === 'Abc123' && password === '000') {
-      navigation.navigate('Cashier1');
+      navigation.navigate('CashManager');
     } else {
       Alert.alert('Invalid Data');
     }
@@ -96,7 +96,7 @@ const LogInEmployee = ({navigation}) => {
             text="LogIn"
             backgroundColor={'#1A72DD'}
             color={'white'}
-            onPress={() => navigation.push('CashManager')}
+            onPress={Submit}
           />
         </TouchableOpacity>
       </View>
@@ -122,13 +122,13 @@ const styles = StyleSheet.create({
   field: {
     borderColor: 'white',
     borderRadius: 2,
-    width: wp('85%'),
+    width: wp('80%'),
     alignSelf: 'center',
     marginTop: hp('1%'),
     backgroundColor: '#EBEEEE',
     fontFamily: 'Roboto-Regular',
     color: '#2A3256',
-    height: hp('6.5%'),
+    height: hp('5.5%'),
     paddingHorizontal: wp('5%'),
     elevation: 5,
   },

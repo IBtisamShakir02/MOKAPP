@@ -20,7 +20,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-// import Header from './Components/Header';
+import Header from './Components/Header';
 
 // create a component
 const CashierManager = ({navigation}) => {
@@ -34,10 +34,10 @@ const CashierManager = ({navigation}) => {
         <View style={styles.imageContainer}>
           <Image source={item.image} style={styles.image} />
         </View>
-        <Text style={[styles.nametxt, {fontSize: getFontSize(20)}]}>
+        <Text style={[styles.nametxt, {fontSize: getFontSize(18)}]}>
           {item.name}
         </Text>
-        <Text style={[styles.pricetxt, {fontSize: getFontSize(18)}]}>
+        <Text style={[styles.pricetxt, {fontSize: getFontSize(16)}]}>
           {item.price}
         </Text>
         <AddButton />
@@ -50,11 +50,13 @@ const CashierManager = ({navigation}) => {
         backgroundColor: '#E3E3E3ED',
         flex: 1,
       }}>
-      {/* <Header
+      <Header
         text={'Cashier'}
-        onPress={() => navigation.push('DrawerNav')}
+        onPress={() => {
+          navigation.openDrawer();
+        }}
         iconname={'menu-fold'}
-      /> */}
+      />
       <View
         style={{
           height: hp('7%'),
@@ -177,9 +179,10 @@ const styles = StyleSheet.create({
   },
   cartcont: {
     height: hp('7%'),
-    borderRadius: wp('4%'),
-    alignSelf: 'center',
+    borderTopLeftRadius: wp('7%'),
+    borderTopRightRadius: wp('7%'),
     justifyContent: 'center',
+    backgroundColor: 'white',
   },
 });
 

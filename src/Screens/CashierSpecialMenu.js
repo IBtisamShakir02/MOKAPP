@@ -15,9 +15,29 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import {SafeAreaView} from 'react-native-safe-area-context';
-// import Header from './Components/Header';
+import Header from './Components/Header';
 import AddButton from '../Screens/Components/AddButton';
-import data from './Components/Data';
+
+const data = [
+  {
+    id: 1,
+    name: 'Burger',
+    price: '$110',
+    image: require('../Screens/assets/images/burger-ga1e31cbfe_640.jpg'),
+  },
+  {
+    id: 2,
+    name: 'Egg Salad',
+    price: '$100',
+    image: require('../Screens/assets/images/EggSalad.png'),
+  },
+  {
+    id: 3,
+    name: 'Steak',
+    price: '$150',
+    image: require('../Screens/assets/images/Steak.jpg'),
+  },
+];
 
 // create a component
 const SpecialMenu = ({navigation}) => {
@@ -31,10 +51,10 @@ const SpecialMenu = ({navigation}) => {
         <View style={styles.imageContainer}>
           <Image source={item.image} style={styles.image} />
         </View>
-        <Text style={[styles.nametxt, {fontSize: getFontSize(20)}]}>
+        <Text style={[styles.nametxt, {fontSize: getFontSize(18)}]}>
           {item.name}
         </Text>
-        <Text style={[styles.pricetxt, {fontSize: getFontSize(18)}]}>
+        <Text style={[styles.pricetxt, {fontSize: getFontSize(16)}]}>
           {item.price}
         </Text>
         <AddButton />
@@ -43,11 +63,13 @@ const SpecialMenu = ({navigation}) => {
   };
   return (
     <SafeAreaView style={{backgroundColor: '#EBEEEE', flex: 1}}>
-      {/* <Header
+      <Header
         text={'Cashier'}
-        onPress={() => navigation.push()}
+        onPress={() => {
+          navigation.openDrawer();
+        }}
         iconname={'menu-fold'}
-      /> */}
+      />
       <View style={styles.Cont1}>
         <Text style={[styles.Cont1txt, {fontSize: getFontSize(20)}]}>
           Special Menu
@@ -59,7 +81,7 @@ const SpecialMenu = ({navigation}) => {
           renderItem={renderItem}
           keyExtractor={item => item.id}
           showsVerticalScrollIndicator={false}
-          numColumns={2}
+          numColumns={1}
         />
         <View style={styles.cartcont}>
           <CartBtn
@@ -103,9 +125,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   listContainer: {
-    width: Dimensions.get('window').width / 2 - 20,
+    width: Dimensions.get('window').width / 1 - 20,
     backgroundColor: 'white',
-    marginLeft: wp('3.1%'),
+    marginLeft: wp('2.4%'),
     marginTop: hp('1%'),
     borderRadius: wp('2%'),
   },
@@ -131,9 +153,11 @@ const styles = StyleSheet.create({
   },
   cartcont: {
     height: hp('7%'),
-    borderRadius: wp('4%'),
-    alignSelf: 'center',
+    borderTopLeftRadius: wp('7%'),
+    borderTopRightRadius: wp('7%'),
     justifyContent: 'center',
+    backgroundColor: 'white',
+    marginBottom: hp('1.3%'),
   },
 });
 

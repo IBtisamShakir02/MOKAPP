@@ -15,7 +15,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-// import Header from './Components/Header';
+import Header from './Components/Header';
 
 // create a component
 const CashierManualInput = ({navigation}) => {
@@ -25,11 +25,13 @@ const CashierManualInput = ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="white" barStyle="dark-content" />
       <View style={{alignSelf: 'center'}}>
-        {/* <Header
+        <Header
           text={'Cashier'}
-          onPress={() => navigation.push('')}
+          onPress={() => {
+            navigation.openDrawer();
+          }}
           iconname={'menu-fold'}
-        /> */}
+        />
         <View style={styles.manualcont}>
           <Text style={[styles.V1txt, {fontSize: getFontSize(20)}]}>
             Manual Input
@@ -81,14 +83,15 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto-Regular',
   },
   cartview: {
-    height: hp('16.5%'),
-    width: wp('98%'),
+    height: hp('14%'),
+    width: wp('96%'),
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
     borderRadius: wp('3%'),
     elevation: 5,
+    marginTop: hp('0.9%'),
   },
   keypadview: {
     height: hp('63%'),

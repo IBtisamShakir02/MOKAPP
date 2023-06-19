@@ -1,9 +1,9 @@
 //import liraries
 import React from 'react';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import {widthPercentageToDP} from 'react-native-responsive-screen';
+import {createDrawerNavigator} from '@react-navigation/drawer'
 import BottomNavigation from './BottomNavigation';
 import AccountTab from '../AccountTab';
+import Sidebar from '../Components/Sidebar';
 
 const Drawer = createDrawerNavigator();
 
@@ -11,19 +11,19 @@ const Drawer = createDrawerNavigator();
 const DrawerNav = () => {
   return (
     <Drawer.Navigator
-      screenOptions={{
-        drawerStyle: {
-          width: widthPercentageToDP('60%'),
-          backgroundColor: 'white',
-        },
-      }}>
+      // screenOptions={{
+      //   drawerStyle: {
+      //     width: widthPercentageToDP('60%'),
+      //     backgroundColor: 'white',
+      //   },
+      // }}
+
+      drawerContent={props => <Sidebar {...props} />}>
       <Drawer.Screen
         name="Cashier"
         component={BottomNavigation}
         options={{
-          headerShown: true,
-          headerTitleAlign: 'center',
-          headerTintColor: '#1A72DD',
+          headerShown: false,
         }}
       />
       <Drawer.Screen

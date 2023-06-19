@@ -117,11 +117,11 @@ const styles = StyleSheet.create({
   field: {
     borderColor: 'white',
     borderRadius: 2,
-    width: wp('85%'),
+    width: wp('80%'),
     marginTop: hp('1%'),
     backgroundColor: '#EBEEEE',
     color: '#2A3256',
-    height: hp('6.5%'),
+    height: hp('5.5%'),
     paddingHorizontal: wp('5%'),
     fontFamily: 'Roboto-Regular',
     elevation: 5,
