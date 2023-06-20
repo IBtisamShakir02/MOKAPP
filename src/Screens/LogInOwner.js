@@ -32,7 +32,7 @@ const LogInOwner = ({navigation}) => {
 
   const submit = () => {
     if (Email === 'Ibtisam' && Password === '000') {
-      navigation.navigate('AddProduct');
+      navigation.navigate('');
     } else {
       Alert.alert('Invalid Data');
     }
@@ -56,7 +56,7 @@ const LogInOwner = ({navigation}) => {
           </Text>
         </View>
         <View style={styles.container}>
-          <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+          <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
             Email or Phone Number:
           </Text>
           <TextInput
@@ -67,7 +67,7 @@ const LogInOwner = ({navigation}) => {
             onChangeText={data => setEmail(data)}
             keyboardType="email-address"
           />
-          <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+          <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
             Password:
           </Text>
           <TextInput
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp('6%'),
     marginTop: hp('4%'),
     color: 'black',
-    fontFamily: 'Roboto-Medium',
+    fontFamily: 'Roboto-Regular',
   },
 
   field: {
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     width: wp('80%'),
     alignSelf: 'center',
-    marginTop: hp('1%'),
+    marginTop: hp('0.8%'),
     backgroundColor: '#EBEEEE',
     color: '#2A3256',
     height: hp('5.5%'),

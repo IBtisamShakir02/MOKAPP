@@ -31,7 +31,7 @@ const ForgotPassword = ({navigation}) => {
           An Email wiil be sent to Your Registered Email to Recover Your Account
           !
         </Text>
-        <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+        <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
           Enter your Email:
         </Text>
         <TextInput
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp('6%'),
     marginTop: hp('6%'),
     color: 'black',
-    fontFamily: 'Roboto-Medium',
+    fontFamily: 'Roboto-Regular',
   },
 
   field: {
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     width: wp('80%'),
     alignSelf: 'center',
-    marginTop: hp('2%'),
+    marginTop: hp('0.8%'),
     backgroundColor: '#EBEEEE',
     color: '#2A3256',
     height: hp('5.5%'),

@@ -18,6 +18,7 @@ import {
 const HelloScreen = ({navigation}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="white" barStyle="dark-content" />
@@ -70,7 +71,7 @@ const HelloScreen = ({navigation}) => {
               text="SignUp"
               backgroundColor={'#1A72DD'}
               color={'white'}
-              onPress={() => navigation.push('CreateAccount')}
+              onPress={() => navigation.push('SignUp')}
             />
           </TouchableOpacity>
           <TouchableOpacity

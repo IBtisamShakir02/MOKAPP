@@ -153,8 +153,8 @@ const styles = StyleSheet.create({
   },
   cartcont: {
     height: hp('7%'),
-    borderTopLeftRadius: wp('7%'),
-    borderTopRightRadius: wp('7%'),
+    borderTopLeftRadius: wp('4%'),
+    borderTopRightRadius: wp('4%'),
     justifyContent: 'center',
     backgroundColor: 'white',
     marginBottom: hp('1.3%'),

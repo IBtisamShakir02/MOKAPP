@@ -4,8 +4,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HelloScreen from './src/Screens/HelloScreen';
 import LogIn from './src/Screens/LogIn';
 import LogInEmployee from './src/Screens/LogInEmployee';
-import LogInOwner from './src/Screens/LoogInOwner';
-import createaccount from './src/Screens/createaccount';
+import LogInOwner from './src/Screens/LogInOwner';
+import SignUp from './src/Screens/SignUp';
 const Stack = createNativeStackNavigator();
 import Addproduct from './src/Screens/AddProduct';
 import ListProduct from './src/Screens/Listproduct';
@@ -15,6 +15,10 @@ import SpecialMenu from './src/Screens/CashierSpecialMenu';
 import ForgotPassword from './src/Screens/ForgotPassword';
 import AccountTab from './src/Screens/AccountTab';
 import DrawerNav from './src/Screens/Components/Drawer';
+import ManageStore from './src/Screens/ManageStore';
+import Discount from './src/Screens/Discount';
+import Customer from './src/Screens/Customer';
+import NewCustomer from './src/Screens/NewCustomer';
 
 function App() {
   return (
@@ -29,8 +33,8 @@ function App() {
         />
 
         <Stack.Screen
-          name="CreateAccount"
-          component={createaccount}
+          name="SignUp"
+          component={SignUp}
           options={{
             headerShown: false,
           }}
@@ -117,6 +121,34 @@ function App() {
         <Stack.Screen
           name="AccountTab"
           component={AccountTab}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="ManageStore"
+          component={ManageStore}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Discount"
+          component={Discount}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Customer"
+          component={Customer}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="NewCustomer"
+          component={NewCustomer}
           options={{
             headerShown: false,
           }}

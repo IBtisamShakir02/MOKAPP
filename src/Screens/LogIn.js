@@ -110,7 +110,7 @@ const LogIn = ({navigation}) => {
 
           <TouchableOpacity>
             <Text
-              onPress={() => navigation.push('CreateAccount')}
+              onPress={() => navigation.push('SignUp')}
               style={{
                 color: '#1A72DD',
                 textAlign: 'center',

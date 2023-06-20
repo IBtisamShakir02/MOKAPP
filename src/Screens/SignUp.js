@@ -15,9 +15,11 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-const CreateAccount = ({navigation}) => {
+
+const SignUp = ({navigation}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
+
   return (
     <ScrollView
       style={{
@@ -54,7 +56,7 @@ const CreateAccount = ({navigation}) => {
         </View>
         <View style={styles.container}>
           <View style={styles.fieldcont}>
-            <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+            <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
               Email:
             </Text>
 
@@ -65,7 +67,7 @@ const CreateAccount = ({navigation}) => {
               keyboardType="email-address"
             />
 
-            <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+            <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
               Phone Number:
             </Text>
             <TextInput
@@ -74,7 +76,7 @@ const CreateAccount = ({navigation}) => {
               placeholderTextColor={'grey'}
               keyboardType="phone-pad"
             />
-            <Text style={[styles.text, {fontSize: getFontSize(21)}]}>
+            <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
               Password:
             </Text>
             <TextInput
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: hp('2%'),
     color: 'black',
-    fontFamily: 'Roboto-Medium',
+    fontFamily: 'Roboto-Regular',
     marginHorizontal: wp('5%'),
   },
 
@@ -118,7 +120,7 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     borderRadius: 2,
     width: wp('80%'),
-    marginTop: hp('1%'),
+    marginTop: hp('0.8%'),
     backgroundColor: '#EBEEEE',
     color: '#2A3256',
     height: hp('5.5%'),
@@ -133,4 +135,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
 });
-export default CreateAccount;
+
+export default SignUp;

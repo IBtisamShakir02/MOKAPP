@@ -73,14 +73,14 @@ const Addproduct = ({navigation}) => {
       <Header
         text={'Add Product'}
         iconname={'arrowleft'}
-        onPress={() => navigation.push('LogInOwner')}
+        onPress={() => navigation.push('Listproduct')}
       />
       <ScrollView>
         <View>
           <Text style={[styles.Detailstxt, {fontSize: getfontSize(23)}]}>
             Product Details:
           </Text>
-          <Text style={[styles.Nametxt, {fontSize: getfontSize(21)}]}>
+          <Text style={[styles.Nametxt, {fontSize: getfontSize(20)}]}>
             Product Name
           </Text>
           <TextInput
@@ -89,7 +89,7 @@ const Addproduct = ({navigation}) => {
             placeholderTextColor={'grey'}
             keyboardType="default"
           />
-          <Text style={[styles.Nametxt, {fontSize: getfontSize(21)}]}>
+          <Text style={[styles.Nametxt, {fontSize: getfontSize(20)}]}>
             Selling Price
           </Text>
           <TextInput
@@ -169,7 +169,7 @@ const Addproduct = ({navigation}) => {
         </View>
 
         <View>
-          <Text style={[styles.Nametxt, {fontSize: getfontSize(21)}]}>
+          <Text style={[styles.Nametxt, {fontSize: getfontSize(20)}]}>
             Categories
           </Text>
           <SelectList
@@ -209,7 +209,7 @@ const Addproduct = ({navigation}) => {
             }}
             defaultOption={{key: '1', value: 'Salad'}}
           />
-          <Text style={[styles.Nametxt, {fontSize: getfontSize(21)}]}>
+          <Text style={[styles.Nametxt, {fontSize: getfontSize(20)}]}>
             Capital Price
           </Text>
           <TextInput
@@ -218,7 +218,7 @@ const Addproduct = ({navigation}) => {
             placeholderTextColor={'grey'}
             keyboardType="number-pad"
           />
-          <Text style={[styles.Nametxt, {fontSize: getfontSize(21)}]}>
+          <Text style={[styles.Nametxt, {fontSize: getfontSize(20)}]}>
             Stock Keeping Unit
           </Text>
           <TextInput
@@ -227,7 +227,7 @@ const Addproduct = ({navigation}) => {
             placeholderTextColor={'grey'}
             keyboardType="name-phone-pad"
           />
-          <Text style={[styles.Nametxt, {fontSize: getfontSize(21)}]}>
+          <Text style={[styles.Nametxt, {fontSize: getfontSize(20)}]}>
             BarCode
           </Text>
         </View>
@@ -247,7 +247,7 @@ const Addproduct = ({navigation}) => {
         </View>
 
         <View>
-          <Text style={[styles.Nametxt, {fontSize: getfontSize(21)}]}>
+          <Text style={[styles.Nametxt, {fontSize: getfontSize(20)}]}>
             Branch
           </Text>
           <SelectList
@@ -298,7 +298,7 @@ const Addproduct = ({navigation}) => {
               text="Add Product"
               backgroundColor={'#1A72DD'}
               color={'white'}
-              onPress={() => navigation.push('Listproduct')}
+              onPress={() => navigation.push()}
             />
           </TouchableOpacity>
         </View>
@@ -314,7 +314,7 @@ const styles = StyleSheet.create({
     marginTop: hp('2.5%'),
     marginLeft: wp('5%'),
     marginBottom: hp('0.7%'),
-    fontFamily: 'Roboto-Medium',
+    fontFamily: 'Roboto-Regular',
   },
   Nametxt: {
     color: 'black',
@@ -346,7 +346,7 @@ const styles = StyleSheet.create({
 
   Typeviewtxt: {
     color: 'black',
-    fontFamily: 'Roboto-Medium',
+    fontFamily: 'Roboto-Regular',
     marginLeft: wp('5%'),
     marginTop: hp('2.3%'),
   },
@@ -389,7 +389,7 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     marginTop: hp('1.3%'),
-    fontFamily: 'Roboto-Medium',
+    fontFamily: 'Roboto-Regular',
   },
 });
 

@@ -18,8 +18,6 @@ import Report from 'react-native-vector-icons/Octicons';
 import Store from 'react-native-vector-icons/Fontisto';
 import Account from 'react-native-vector-icons/MaterialCommunityIcons';
 import Support from 'react-native-vector-icons/FontAwesome';
-import CusButton from '../Components/CusButton';
-import CartBtn from './CartBtn';
 
 const Sidebar = ({navigation}) => {
   const fontScale = PixelRatio.getFontScale();
@@ -54,7 +52,7 @@ const Sidebar = ({navigation}) => {
               fontFamily: 'Roboto-Medium',
               marginLeft: wp('5%'),
             }}>
-            Cahier
+            Cashier
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -102,6 +100,7 @@ const Sidebar = ({navigation}) => {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
+          onPress={() => navigation.push('ManageStore')}
           activeOpacity={0.8}
           style={{
             width: wp('63%'),

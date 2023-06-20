@@ -32,11 +32,11 @@ const ListProduct = ({navigation}) => {
         <Header
           text={'List Product'}
           iconname={'arrowleft'}
-          onPress={() => navigation.push('AddProduct')}
+          onPress={() => navigation.push('ManageStore')}
         />
         <View style={styles.Searchview}>
           <TextInput
-            style={[styles.txtinpt, {fontSize: getFontSize(22)}]}
+            style={[styles.txtinpt, {fontSize: getFontSize(21)}]}
             placeholder="Search Here"
             placeholderTextColor={'grey'}
             placeholderStyle={{width: wp('20%')}}
@@ -63,7 +63,7 @@ const ListProduct = ({navigation}) => {
                   style={{
                     color: 'black',
                     fontSize: getFontSize(21),
-                    fontFamily: 'Roboto-Medium',
+                    fontFamily: 'Roboto-Regular',
                     marginTop: hp('1.3%'),
                   }}>
                   $27.99
@@ -87,7 +87,7 @@ const ListProduct = ({navigation}) => {
                   style={{
                     color: 'black',
                     fontSize: getFontSize(21),
-                    fontFamily: 'Roboto-Medium',
+                    fontFamily: 'Roboto-Regular',
                     marginTop: hp('1.3%'),
                   }}>
                   $27.99
@@ -111,7 +111,7 @@ const ListProduct = ({navigation}) => {
                   style={{
                     color: 'black',
                     fontSize: getFontSize(21),
-                    fontFamily: 'Roboto-Medium',
+                    fontFamily: 'Roboto-Regular',
                     marginTop: hp('1.3%'),
                   }}>
                   $27.99
@@ -135,7 +135,7 @@ const ListProduct = ({navigation}) => {
                   style={{
                     color: 'black',
                     fontSize: getFontSize(21),
-                    fontFamily: 'Roboto-Medium',
+                    fontFamily: 'Roboto-Regular',
                     marginTop: hp('1.3%'),
                   }}>
                   $27.99
@@ -152,7 +152,7 @@ const ListProduct = ({navigation}) => {
               text="Add New Product"
               backgroundColor={'#1A72DD'}
               color={'white'}
-              onPress={() => navigation.push()}
+              onPress={() => navigation.push('AddProduct')}
               IconName=""
             />
           </TouchableOpacity>
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
   },
   btnTxt: {
     color: 'black',
-    fontFamily: 'Roboto-Medium',
+    fontFamily: 'Roboto-Regular',
   },
   smlfnt: {
     color: 'black',

@@ -84,13 +84,12 @@ const styles = StyleSheet.create({
   },
   cartview: {
     height: hp('14%'),
-    width: wp('96%'),
+    width: wp('98%'),
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
     borderRadius: wp('3%'),
-    elevation: 5,
     marginTop: hp('0.9%'),
   },
   keypadview: {
