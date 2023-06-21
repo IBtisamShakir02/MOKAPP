@@ -50,7 +50,7 @@ const CashierManualInput = ({navigation}) => {
               text="(Count) Items  Total:(Bill)"
               IconName="shopping-cart"
               onPress={() => navigation.push('PaymentMethod1')}
-              height={55}
+              height={70}
             />
           </TouchableOpacity>
         </View>

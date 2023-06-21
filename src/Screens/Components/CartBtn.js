@@ -44,7 +44,7 @@ const CartBtn = ({text, onPress, IconName, height}) => {
 // define your styles
 const styles = StyleSheet.create({
   button: {
-    width: wp('95%'),
+    width: wp('93%'),
     borderRadius: wp('2%'),
     alignItems: 'center',
     justifyContent: 'space-evenly',

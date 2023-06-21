@@ -88,7 +88,7 @@ const SpecialMenu = ({navigation}) => {
             text="(Count) Items  Total:(Bill)"
             IconName="shopping-cart"
             onPress={() => navigation.push('')}
-            height={50}
+            height={60}
           />
         </View>
       </View>
@@ -152,12 +152,12 @@ const styles = StyleSheet.create({
     marginLeft: wp('3%'),
   },
   cartcont: {
-    height: hp('7%'),
+    height: hp('10%'),
     borderTopLeftRadius: wp('4%'),
     borderTopRightRadius: wp('4%'),
     justifyContent: 'center',
     backgroundColor: 'white',
-    marginBottom: hp('1.3%'),
+    marginBottom: hp('1.2%'),
   },
 });
 

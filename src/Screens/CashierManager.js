@@ -141,7 +141,7 @@ const CashierManager = ({navigation}) => {
             text="(Count) Items  Total:(Bill)"
             IconName="shopping-cart"
             onPress={() => navigation.push()}
-            height={50}
+            height={60}
           />
         </TouchableOpacity>
       </View>
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     marginLeft: wp('3%'),
   },
   cartcont: {
-    height: hp('7%'),
+    height: hp('10%'),
     borderTopLeftRadius: wp('4%'),
     borderTopRightRadius: wp('4%'),
     justifyContent: 'center',

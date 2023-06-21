@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
     marginTop: hp('0.2%'),
     borderRadius: 8,
     borderWidth: wp('0.1%'),
-    borderColor: '#d3d3d3',
+    borderColor: '#2A3256',
     alignSelf: 'center',
     flexDirection: 'row',
     elevation: 8,

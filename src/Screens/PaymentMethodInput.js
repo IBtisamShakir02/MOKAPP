@@ -15,11 +15,14 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import Header from './Components/Header';
+import NonCash from './Components/NonCash';
 
 // create a component
 const PaymentMethod1 = ({navigation}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
+
+  const [selectedTab, setSelectedTab] = useState(0);
   const [Count, setCount] = useState('');
   const CountBill = value => {
     setCount(value);
@@ -60,10 +63,21 @@ const PaymentMethod1 = ({navigation}) => {
                 borderBottomWidth: wp('0.8%'),
                 justifyContent: 'center',
                 elevation: 5,
+                backgroundColor: selectedTab === 0 ? '#1A72DD' : 'white',
               },
             ]}>
-            <TouchableOpacity>
-              <Text style={[styles.Cont2txt, {fontSize: getFontSize(22)}]}>
+            <TouchableOpacity
+              onPress={() => {
+                setSelectedTab(0);
+              }}>
+              <Text
+                style={[
+                  styles.Cont2txt,
+                  {
+                    fontSize: getFontSize(22),
+                    color: selectedTab === 0 ? 'white' : 'black',
+                  },
+                ]}>
                 Cash
               </Text>
             </TouchableOpacity>
@@ -79,10 +93,21 @@ const PaymentMethod1 = ({navigation}) => {
                 borderBottomWidth: wp('0.8%'),
                 justifyContent: 'center',
                 elevation: 5,
+                backgroundColor: selectedTab === 1 ? '#1A72DD' : 'white',
               },
             ]}>
-            <TouchableOpacity>
-              <Text style={[styles.Cont2txt, {fontSize: getFontSize(22)}]}>
+            <TouchableOpacity
+              onPress={() => {
+                setSelectedTab(1);
+              }}>
+              <Text
+                style={[
+                  styles.Cont2txt,
+                  {
+                    fontSize: getFontSize(22),
+                    color: selectedTab === 1 ? 'white' : 'black',
+                  },
+                ]}>
                 Non-Cash
               </Text>
             </TouchableOpacity>
@@ -103,13 +128,14 @@ const PaymentMethod1 = ({navigation}) => {
                 marginLeft: wp('1.5%'),
                 fontSize: getFontSize(22),
                 marginTop: hp('0.3%'),
+                color: 'black',
               },
             ]}>
             Exact Amount
           </Text>
         </View>
         <View style={styles.keypadcont}>
-          <KeyPad CountBill={CountBill} />
+          {selectedTab === 0 ? <KeyPad CountBill={CountBill} /> : <NonCash />}
         </View>
       </View>
     </SafeAreaView>
@@ -137,7 +163,6 @@ const styles = StyleSheet.create({
     marginHorizontal: wp('4%'),
   },
   Cont2txt: {
-    color: 'black',
     fontFamily: 'Rubik-Regular',
     textAlign: 'center',
   },
@@ -158,6 +183,9 @@ const styles = StyleSheet.create({
     width: wp('99%'),
     height: hp('64%'),
     alignSelf: 'center',
+    backgroundColor: 'white',
+    borderRadius: wp('3%'),
+    marginTop: hp('0.7%'),
   },
 });
 

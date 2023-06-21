@@ -44,7 +44,7 @@ const CusButton = ({
               />
             ) : null}
             <Text
-              style={[styles.buttonText, {color, fontSize: getFontSize(20)}]}>
+              style={[styles.buttonText, {color, fontSize: getFontSize(17)}]}>
               {' '}
               {text}{' '}
             </Text>

@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
   ContField: {
     height: hp('7%'),
     width: wp('90%'),
-    borderColor: '#d3d3d3',
+    borderColor: '#2A3256',
     borderWidth: wp('0.1%'),
     alignSelf: 'center',
     justifyContent: 'center',
