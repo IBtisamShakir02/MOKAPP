@@ -4,7 +4,7 @@ import {
   StyleSheet,
   SafeAreaView,
   TextInput,
-  TouchableOpacity,
+  ScrollView,
   PixelRatio,
   Text,
 } from 'react-native';
@@ -26,54 +26,60 @@ const NewCustomer = ({navigation}) => {
         iconname={'arrowleft'}
         onPress={() => navigation.push('Customer')}
       />
-      <View style={styles.MiddleCont}>
-        <View style={styles.inputView}>
-          <Text style={[styles.text, {fontSize: getFontSize(20)}]}>Name:</Text>
-          <TextInput
-            style={[styles.field, {fontSize: getFontSize(17)}]}
-            placeholder="Enter Your Name"
-            placeholderTextColor={'grey'}
-          />
-          <Text style={[styles.text, {fontSize: getFontSize(20)}]}>Email:</Text>
-          <TextInput
-            style={[styles.field, {fontSize: getFontSize(17)}]}
-            placeholder="Enter Your Email"
-            placeholderTextColor={'grey'}
-            keyboardType="email-address"
-          />
+      <ScrollView>
+        <View style={styles.MiddleCont}>
+          <View style={styles.inputView}>
+            <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
+              Name:
+            </Text>
+            <TextInput
+              style={[styles.field, {fontSize: getFontSize(17)}]}
+              placeholder="Enter Your Name"
+              placeholderTextColor={'grey'}
+            />
+            <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
+              Email:
+            </Text>
+            <TextInput
+              style={[styles.field, {fontSize: getFontSize(17)}]}
+              placeholder="Enter Your Email"
+              placeholderTextColor={'grey'}
+              keyboardType="email-address"
+            />
 
-          <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
-            Phone Number:
-          </Text>
-          <TextInput
-            style={[styles.field, {fontSize: getFontSize(17)}]}
-            placeholder="Enter Your Phone Number"
-            placeholderTextColor={'grey'}
-            keyboardType="phone-pad"
-          />
-          <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
-            Address:
-          </Text>
-          <TextInput
-            style={[
-              styles.field,
-              {fontSize: getFontSize(17), height: hp('15%')},
-            ]}
-            placeholder="Enter Your Full Address"
-            placeholderTextColor={'grey'}
-            multiline={true}
-            numberOfLines={3}
-          />
+            <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
+              Phone Number:
+            </Text>
+            <TextInput
+              style={[styles.field, {fontSize: getFontSize(17)}]}
+              placeholder="Enter Your Phone Number"
+              placeholderTextColor={'grey'}
+              keyboardType="phone-pad"
+            />
+            <Text style={[styles.text, {fontSize: getFontSize(20)}]}>
+              Address:
+            </Text>
+            <TextInput
+              style={[
+                styles.field,
+                {fontSize: getFontSize(17), height: hp('15%')},
+              ]}
+              placeholder="Enter Your Full Address"
+              placeholderTextColor={'grey'}
+              multiline={true}
+              numberOfLines={3}
+            />
+          </View>
+          <View style={styles.btnView}>
+            <CusButton
+              text="Save"
+              backgroundColor={'#1A72DD'}
+              color={'white'}
+              onPress={() => navigation.push('')}
+            />
+          </View>
         </View>
-        <View style={styles.btnView}>
-          <CusButton
-            text="Save"
-            backgroundColor={'#1A72DD'}
-            color={'white'}
-            onPress={() => navigation.push('')}
-          />
-        </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
@@ -104,16 +110,17 @@ const styles = StyleSheet.create({
   },
 
   field: {
-    borderColor: 'white',
-    borderRadius: 2,
+    borderBottomColor: 'black',
+    borderBottomWidth: wp('0.2%'),
+    borderRadius: wp('2%'),
     width: wp('80%'),
     marginTop: hp('0.8%'),
-    backgroundColor: '#EBEEEE',
+    backgroundColor: 'white',
     color: '#2A3256',
     height: hp('5.5%'),
     paddingHorizontal: wp('5%'),
     fontFamily: 'Roboto-Regular',
-    elevation: 5,
+    elevation: 1,
     alignSelf: 'center',
   },
   btnView: {

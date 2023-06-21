@@ -73,17 +73,18 @@ const styles = StyleSheet.create({
   },
 
   field: {
-    borderColor: 'white',
-    borderRadius: 2,
+    borderBottomColor: 'black',
+    borderBottomWidth: wp('0.2%'),
+    borderRadius: wp('2%'),
     width: wp('80%'),
     alignSelf: 'center',
     marginTop: hp('0.8%'),
-    backgroundColor: '#EBEEEE',
+    backgroundColor: 'white',
     color: '#2A3256',
     height: hp('5.5%'),
     paddingHorizontal: wp('5%'),
     fontFamily: 'Roboto-Regular',
-    elevation: 5,
+    elevation: 1,
     marginBottom: hp('5%'),
   },
 });

@@ -182,10 +182,11 @@ const Addproduct = ({navigation}) => {
               width: wp('85%'),
               alignSelf: 'center',
               marginTop: hp('2%'),
-              backgroundColor: '#EBEEEE',
+              backgroundColor: 'white',
               elevation: 3,
               alignItems: 'center',
               borderColor: '#E3E3E3DE',
+              borderBottomColor: 'black',
             }}
             inputStyles={{
               color: 'black',
@@ -202,10 +203,11 @@ const Addproduct = ({navigation}) => {
               width: wp('85%'),
               alignSelf: 'center',
               height: hp('27%'),
-              backgroundColor: '#EBEEEE',
+              backgroundColor: 'white',
               elevation: 3,
               marginBottom: hp('-3%'),
               borderColor: '#E3E3E3DE',
+              borderBottomColor: 'black',
             }}
             defaultOption={{key: '1', value: 'Salad'}}
           />
@@ -260,10 +262,11 @@ const Addproduct = ({navigation}) => {
               width: wp('85%'),
               alignSelf: 'center',
               marginTop: hp('2%'),
-              backgroundColor: '#EBEEEE',
+              backgroundColor: 'white',
               elevation: 3,
               alignItems: 'center',
               borderColor: '#E3E3E3DE',
+              borderBottomColor: 'black',
             }}
             inputStyles={{
               color: 'black',
@@ -280,10 +283,11 @@ const Addproduct = ({navigation}) => {
               width: wp('85%'),
               alignSelf: 'center',
               height: hp('27%'),
-              backgroundColor: '#EBEEEE',
+              backgroundColor: 'white',
               elevation: 3,
               marginBottom: hp('-3%'),
               borderColor: '#E3E3E3DE',
+              borderBottomColor: 'black',
             }}
             defaultOption={{key: 'a', value: 'Islamabad'}}
           />
@@ -323,17 +327,18 @@ const styles = StyleSheet.create({
     marginTop: hp('2.5%'),
   },
   field: {
-    borderColor: 'white',
-    borderRadius: 2,
+    borderBottomColor: 'black',
+    borderBottomWidth: wp('0.2%'),
+    borderRadius: wp('2%'),
     width: wp('85%'),
     alignSelf: 'center',
     marginTop: hp('0.8%'),
-    backgroundColor: '#EBEEEE',
+    backgroundColor: 'white',
     fontFamily: 'Roboto-Regular',
     color: '#2A3256',
     height: hp('5.5%'),
     paddingHorizontal: wp('5%'),
-    elevation: 5,
+    elevation: 1,
   },
   Typeview: {
     backgroundColor: '#EBEEEE',
@@ -352,18 +357,18 @@ const styles = StyleSheet.create({
   },
 
   Typefiled: {
-    borderColor: '#E3E3E3DE',
-    borderWidth: wp('0.1%'),
-    borderRadius: wp('1.5%'),
+    borderBottomColor: 'black',
+    borderBottomWidth: wp('0.2%'),
+    borderRadius: wp('2%'),
     width: wp('80%'),
     alignSelf: 'center',
     marginTop: hp('1.5%'),
-    backgroundColor: '#EBEEEE',
+    backgroundColor: 'white',
     fontFamily: 'Roboto-Regular',
     color: '#2A3256',
     height: hp('5.5%'),
     paddingHorizontal: wp('4%'),
-    elevation: 3,
+    elevation: 1,
   },
   Picview: {
     backgroundColor: 'white',

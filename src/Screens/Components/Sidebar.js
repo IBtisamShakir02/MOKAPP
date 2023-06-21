@@ -49,7 +49,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Medium',
+              fontFamily: 'Roboto-Regular',
               marginLeft: wp('5%'),
             }}>
             Cashier
@@ -71,7 +71,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Medium',
+              fontFamily: 'Roboto-Regular',
               marginLeft: wp('5%'),
             }}>
             History Transactions
@@ -93,7 +93,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Medium',
+              fontFamily: 'Roboto-Regular',
               marginLeft: wp('7%'),
             }}>
             Report
@@ -116,7 +116,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Medium',
+              fontFamily: 'Roboto-Regular',
               marginLeft: wp('5%'),
             }}>
             Manage Store
@@ -139,7 +139,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Medium',
+              fontFamily: 'Roboto-Regular',
               marginLeft: wp('4.5%'),
             }}>
             Account
@@ -161,7 +161,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Medium',
+              fontFamily: 'Roboto-Regular',
               marginLeft: wp('5%'),
             }}>
             Support

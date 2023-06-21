@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   PixelRatio,
   Text,
+  ScrollView,
 } from 'react-native';
 import Header from './Components/Header';
 import {
@@ -39,39 +40,40 @@ const Customer = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
-
-      <View style={styles.MiddleCont}>
-        <TouchableOpacity activeOpacity={0.6} style={styles.txtpress}>
-          <Text style={[styles.smlfont, {fontSize: getFontSize(17)}]}>
-            Arslan
-          </Text>
-          <ArrowIcon
-            style={{marginTop: hp('0.5%')}}
-            name="chevron-right"
-            color="black"
-            size={15}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity activeOpacity={0.6} style={styles.txtpress}>
-          <Text style={[styles.smlfont, {fontSize: getFontSize(17)}]}>
-            Bilal
-          </Text>
-          <ArrowIcon
-            style={{marginTop: hp('0.5%')}}
-            name="chevron-right"
-            color="black"
-            size={15}
-          />
-        </TouchableOpacity>
-        <View style={styles.btnView}>
-          <CusButton
-            text="Add New Customer"
-            backgroundColor={'#1A72DD'}
-            color={'white'}
-            onPress={() => navigation.push('NewCustomer')}
-          />
+      <ScrollView>
+        <View style={styles.MiddleCont}>
+          <TouchableOpacity activeOpacity={0.6} style={styles.txtpress}>
+            <Text style={[styles.smlfont, {fontSize: getFontSize(17)}]}>
+              Arslan
+            </Text>
+            <ArrowIcon
+              style={{marginTop: hp('0.5%')}}
+              name="chevron-right"
+              color="black"
+              size={15}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity activeOpacity={0.6} style={styles.txtpress}>
+            <Text style={[styles.smlfont, {fontSize: getFontSize(17)}]}>
+              Bilal
+            </Text>
+            <ArrowIcon
+              style={{marginTop: hp('0.5%')}}
+              name="chevron-right"
+              color="black"
+              size={15}
+            />
+          </TouchableOpacity>
+          <View style={styles.btnView}>
+            <CusButton
+              text="Add New Customer"
+              backgroundColor={'#1A72DD'}
+              color={'white'}
+              onPress={() => navigation.push('NewCustomer')}
+            />
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

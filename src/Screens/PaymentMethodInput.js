@@ -53,6 +53,7 @@ const PaymentMethod1 = ({navigation}) => {
             style={[
               styles.Cont1,
               {
+                height: hp('8%'),
                 width: wp('49.5%'),
                 alignSelf: 'flex-start',
                 borderBottomColor: '#000080',
@@ -71,6 +72,7 @@ const PaymentMethod1 = ({navigation}) => {
             style={[
               styles.Cont1,
               {
+                height: hp('8%'),
                 width: wp('49.5%'),
                 alignSelf: 'flex-start',
                 borderBottomColor: '#000080',
@@ -140,7 +142,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   Cont3: {
-    height: hp('10%'),
+    height: hp('8%'),
     width: wp('97%'),
     alignSelf: 'center',
     borderColor: '#d3d3d3',

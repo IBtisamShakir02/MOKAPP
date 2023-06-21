@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   PixelRatio,
   Text,
+  ScrollView,
 } from 'react-native';
 import Header from './Components/Header';
 import {
@@ -37,56 +38,58 @@ const Discount = ({navigation}) => {
           </TouchableOpacity>
         </View>
       </View>
-      <View style={styles.MiddleCont}>
-        <View style={styles.DiscBtnView}>
-          <TouchableOpacity
-            activeOpacity={0.6}
-            style={[
-              styles.DiscountBtn,
-              {
-                backgroundColor: '#61A4F1',
-                padding: wp('8%'),
-              },
-            ]}>
-            <Text style={[styles.btntxt, {fontSize: getFontSize(25)}]}>
-              Discount Opening - 50%
-            </Text>
-            <Text style={[styles.btntxt, {fontSize: getFontSize(13)}]}>
-              Opening Discount for new Customers
-            </Text>
-          </TouchableOpacity>
+      <ScrollView>
+        <View style={styles.MiddleCont}>
+          <View style={styles.DiscBtnView}>
+            <TouchableOpacity
+              activeOpacity={0.6}
+              style={[
+                styles.DiscountBtn,
+                {
+                  backgroundColor: '#61A4F1',
+                  padding: wp('8%'),
+                },
+              ]}>
+              <Text style={[styles.btntxt, {fontSize: getFontSize(25)}]}>
+                Discount Opening - 50%
+              </Text>
+              <Text style={[styles.btntxt, {fontSize: getFontSize(13)}]}>
+                Opening Discount for new Customers
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.DiscBtnView}>
+            <TouchableOpacity
+              activeOpacity={0.6}
+              style={[
+                styles.DiscountBtn,
+                {backgroundColor: '#CA93EB', padding: wp('8%')},
+              ]}>
+              <Text style={[styles.btntxt, {fontSize: getFontSize(25)}]}>
+                E-Wallet - 10%
+              </Text>
+              <Text style={[styles.btntxt, {fontSize: getFontSize(13)}]}>
+                Disc for Customers with E-Wallet
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.DiscBtnView}>
+            <TouchableOpacity
+              activeOpacity={0.6}
+              style={[
+                styles.DiscountBtn,
+                {backgroundColor: '#FF90D2', padding: wp('8%')},
+              ]}>
+              <Text style={[styles.btntxt, {fontSize: getFontSize(25)}]}>
+                Discount VISAcard - 17%
+              </Text>
+              <Text style={[styles.btntxt, {fontSize: getFontSize(13)}]}>
+                For VISA card Payment
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-        <View style={styles.DiscBtnView}>
-          <TouchableOpacity
-            activeOpacity={0.6}
-            style={[
-              styles.DiscountBtn,
-              {backgroundColor: '#CA93EB', padding: wp('8%')},
-            ]}>
-            <Text style={[styles.btntxt, {fontSize: getFontSize(25)}]}>
-              E-Wallet - 10%
-            </Text>
-            <Text style={[styles.btntxt, {fontSize: getFontSize(13)}]}>
-              Disc for Customers with E-Wallet
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.DiscBtnView}>
-          <TouchableOpacity
-            activeOpacity={0.6}
-            style={[
-              styles.DiscountBtn,
-              {backgroundColor: '#FF90D2', padding: wp('8%')},
-            ]}>
-            <Text style={[styles.btntxt, {fontSize: getFontSize(25)}]}>
-              Discount VISAcard - 17%
-            </Text>
-            <Text style={[styles.btntxt, {fontSize: getFontSize(13)}]}>
-              For VISA card Payment
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
