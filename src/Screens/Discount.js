@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     paddingRight: wp('2%'),
     borderRadius: wp('3%'),
     backgroundColor: 'white',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: 'black',
   },
   MiddleCont: {
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
   },
   btntxt: {
     color: 'white',
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
   },
 });
 

@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   txt: {
-    fontFamily: 'Roboto-Medium',
+    fontWeight:'500',
     color: '#1A72DD',
     marginTop: heightPercentageToDP('1.7%'),
     textAlign: 'center',

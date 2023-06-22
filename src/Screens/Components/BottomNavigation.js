@@ -3,7 +3,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import CashierManager from '../CashierManager';
 import CashierSpecialMenu from '../CashierSpecialMenu';
-import CashierManualInput from '../CashierManualInput';
+import Order from '../Order';
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FoundationIcons from 'react-native-vector-icons/Foundation';
 import {
@@ -31,7 +31,7 @@ const BottomNavigation = () => {
         tabBarHideOnKeyboard: true,
       }}>
       <Tab.Screen
-        name="Cashier"
+        name="CashierManager"
         component={CashierManager}
         options={{
           tabBarIcon: ({color}) => (
@@ -49,8 +49,8 @@ const BottomNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="ManualInput"
-        component={CashierManualInput}
+        name="Order"
+        component={Order}
         options={{
           tabBarIcon: ({color}) => (
             <FoundationIcons name="clipboard-pencil" color={color} size={30} />

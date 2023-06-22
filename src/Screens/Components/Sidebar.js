@@ -49,7 +49,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('5%'),
             }}>
             Cashier
@@ -71,7 +71,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('5%'),
             }}>
             History Transactions
@@ -93,7 +93,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('7%'),
             }}>
             Report
@@ -116,7 +116,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('5%'),
             }}>
             Manage Store
@@ -139,7 +139,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('4.5%'),
             }}>
             Account
@@ -161,7 +161,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('5%'),
             }}>
             Support
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
   },
   upperconttxt: {
     color: 'white',
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
     marginLeft: wp('4%'),
     marginTop: hp('2%'),
   },
@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
   },
   btntxt: {
     color: '#1A72DD',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '500',
   },
 });
 

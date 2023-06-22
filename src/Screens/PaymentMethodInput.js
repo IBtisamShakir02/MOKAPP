@@ -31,7 +31,7 @@ const PaymentMethod1 = ({navigation}) => {
     <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
       <Header
         text={'Payment Method'}
-        onPress={() => navigation.push('CashManager')}
+        onPress={() => navigation.push('Order')}
         iconname={'arrowleft'}
       />
       <View style={{backgroundColor: 'white'}}>
@@ -45,7 +45,7 @@ const PaymentMethod1 = ({navigation}) => {
               {
                 color: '#1A72DD',
                 fontSize: getFontSize(25),
-                fontFamily: 'Roboto-Medium',
+                fontWeight: '500',
               },
             ]}>
             ${Count ? Count : ''}
@@ -158,12 +158,12 @@ const styles = StyleSheet.create({
   },
   Cont1txt: {
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     textAlign: 'left',
     marginHorizontal: wp('4%'),
   },
   Cont2txt: {
-    fontFamily: 'Rubik-Regular',
+    fontWeight: '400',
     textAlign: 'center',
   },
   Cont3: {

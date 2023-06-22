@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   fstconttxt: {
     color: 'darkgreen',
     textAlign: 'center',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
 
   text: {
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     marginHorizontal: wp('6%'),
     marginTop: hp('4%'),
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
 
   field: {
@@ -162,14 +162,14 @@ const styles = StyleSheet.create({
     color: '#2A3256',
     height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     elevation: 1,
   },
   otptxt: {
     color: 'black',
     margin: 25,
     marginBottom: hp('4%'),
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '400',
   },
   btncont1: {
     flexDirection: 'row',
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: hp('1%'),
     textDecorationLine: 'underline',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
 });
 

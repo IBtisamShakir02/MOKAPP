@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     textTransform: 'uppercase',
-    fontFamily: 'Roboto-Medium',
+    fontWeight:'500',
   },
 });
 

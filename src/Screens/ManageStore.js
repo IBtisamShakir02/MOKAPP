@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
     paddingRight: wp('2%'),
     borderRadius: wp('3%'),
     backgroundColor: 'white',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: 'black',
   },
   MiddleCont: {
@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
     padding: wp('1%'),
   },
   setproducttxt: {
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
     color: 'black',
   },
   txtpress: {
@@ -323,7 +323,7 @@ const styles = StyleSheet.create({
     padding: wp('1%'),
   },
   smlfont: {
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: 'black',
   },
 });

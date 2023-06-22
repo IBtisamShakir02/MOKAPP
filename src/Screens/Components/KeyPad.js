@@ -193,7 +193,6 @@ const styles = StyleSheet.create({
     marginLeft: wp('4%'),
     marginBottom: hp('2%'),
     fontWeight: '400',
-    fontFamily: 'Roboto-Regular',
   },
   ContField: {
     height: hp('7%'),
@@ -211,7 +210,7 @@ const styles = StyleSheet.create({
     marginLeft: wp('5%'),
     alignSelf: 'center',
     justifyContent: 'center',
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '700',
   },
   ContInput: {
     width: wp('84%'),
@@ -219,7 +218,7 @@ const styles = StyleSheet.create({
     color: '#1A72DD',
     justifyContent: 'center',
     alignSelf: 'center',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: 'bold',
     marginTop: hp('0.3%'),
   },
   calcont: {
@@ -263,7 +262,7 @@ const styles = StyleSheet.create({
   },
   calbtntxt: {
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
   Dot: {
     color: 'black',
@@ -291,7 +290,7 @@ const styles = StyleSheet.create({
   },
   calbtntxt2: {
     color: 'white',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
 });
 

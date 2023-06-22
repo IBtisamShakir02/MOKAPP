@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: hp('3%'),
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     marginHorizontal: wp('5%'),
   },
 
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     color: '#2A3256',
     height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     elevation: 1,
     alignSelf: 'center',
   },

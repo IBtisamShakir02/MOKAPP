@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     paddingRight: wp('2%'),
     borderRadius: wp('3%'),
     backgroundColor: 'white',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: 'black',
   },
   MiddleCont: {
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     padding: wp('2%'),
   },
   smlfont: {
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: 'black',
   },
   btnView: {

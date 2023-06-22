@@ -36,7 +36,7 @@ const ListProduct = ({navigation}) => {
         />
         <View style={styles.Searchview}>
           <TextInput
-            style={[styles.txtinpt, {fontSize: getFontSize(21)}]}
+            style={[styles.txtinpt, {fontSize: getFontSize(18)}]}
             placeholder="Search Here"
             placeholderTextColor={'grey'}
             placeholderStyle={{width: wp('20%')}}
@@ -49,12 +49,12 @@ const ListProduct = ({navigation}) => {
 
         <View style={{marginTop: hp('0.5%')}}>
           <View>
-            <TouchableOpacity activeOpacity={0.5} style={styles.btn}>
+            <View activeOpacity={0.5} style={styles.btn}>
               <View>
-                <Text style={[styles.btnTxt, {fontSize: getFontSize(22)}]}>
+                <Text style={[styles.btnTxt, {fontSize: getFontSize(18)}]}>
                   Wagyu Sate
                 </Text>
-                <Text style={[styles.smlfnt, {fontSize: getFontSize(14)}]}>
+                <Text style={[styles.smlfnt, {fontSize: getFontSize(12)}]}>
                   All Branches
                 </Text>
               </View>
@@ -62,23 +62,23 @@ const ListProduct = ({navigation}) => {
                 <Text
                   style={{
                     color: 'black',
-                    fontSize: getFontSize(21),
-                    fontFamily: 'Roboto-Regular',
-                    marginTop: hp('1.3%'),
+                    fontSize: getFontSize(17),
+                    fontWeight: '400',
+                    alignSelf: 'center',
                   }}>
                   $27.99
                 </Text>
               </View>
-            </TouchableOpacity>
+            </View>
           </View>
 
           <View>
-            <TouchableOpacity activeOpacity={0.5} style={styles.btn}>
+            <View style={styles.btn}>
               <View>
-                <Text style={[styles.btnTxt, {fontSize: getFontSize(22)}]}>
+                <Text style={[styles.btnTxt, {fontSize: getFontSize(18)}]}>
                   Wagyu Black Pepper
                 </Text>
-                <Text style={[styles.smlfnt, {fontSize: getFontSize(14)}]}>
+                <Text style={[styles.smlfnt, {fontSize: getFontSize(12)}]}>
                   All Branches
                 </Text>
               </View>
@@ -86,23 +86,23 @@ const ListProduct = ({navigation}) => {
                 <Text
                   style={{
                     color: 'black',
-                    fontSize: getFontSize(21),
-                    fontFamily: 'Roboto-Regular',
-                    marginTop: hp('1.3%'),
+                    fontSize: getFontSize(17),
+                    fontWeight: '400',
+                    alignSelf: 'center',
                   }}>
                   $27.99
                 </Text>
               </View>
-            </TouchableOpacity>
+            </View>
           </View>
 
           <View>
-            <TouchableOpacity activeOpacity={0.5} style={styles.btn}>
+            <View style={styles.btn}>
               <View>
-                <Text style={[styles.btnTxt, {fontSize: getFontSize(22)}]}>
+                <Text style={[styles.btnTxt, {fontSize: getFontSize(18)}]}>
                   Salad Egg
                 </Text>
-                <Text style={[styles.smlfnt, {fontSize: getFontSize(14)}]}>
+                <Text style={[styles.smlfnt, {fontSize: getFontSize(12)}]}>
                   All Branches
                 </Text>
               </View>
@@ -110,23 +110,23 @@ const ListProduct = ({navigation}) => {
                 <Text
                   style={{
                     color: 'black',
-                    fontSize: getFontSize(21),
-                    fontFamily: 'Roboto-Regular',
-                    marginTop: hp('1.3%'),
+                    fontSize: getFontSize(17),
+                    fontWeight: '400',
+                    alignSelf: 'center',
                   }}>
                   $27.99
                 </Text>
               </View>
-            </TouchableOpacity>
+            </View>
           </View>
 
           <View>
-            <TouchableOpacity activeOpacity={0.5} style={styles.btn}>
+            <View style={styles.btn}>
               <View>
-                <Text style={[styles.btnTxt, {fontSize: getFontSize(22)}]}>
+                <Text style={[styles.btnTxt, {fontSize: getFontSize(18)}]}>
                   Salad Tuna
                 </Text>
-                <Text style={[styles.smlfnt, {fontSize: getFontSize(14)}]}>
+                <Text style={[styles.smlfnt, {fontSize: getFontSize(12)}]}>
                   All Branches
                 </Text>
               </View>
@@ -134,14 +134,14 @@ const ListProduct = ({navigation}) => {
                 <Text
                   style={{
                     color: 'black',
-                    fontSize: getFontSize(21),
-                    fontFamily: 'Roboto-Regular',
-                    marginTop: hp('1.3%'),
+                    fontSize: getFontSize(17),
+                    fontWeight: '400',
+                    alignSelf: 'center',
                   }}>
                   $27.99
                 </Text>
               </View>
-            </TouchableOpacity>
+            </View>
           </View>
         </View>
 
@@ -177,42 +177,40 @@ const ListProduct = ({navigation}) => {
 const styles = StyleSheet.create({
   Searchview: {
     backgroundColor: 'white',
-    width: wp('99%'),
-    height: hp('9%'),
-    marginTop: hp('0.2%'),
+    width: wp('98%'),
+    height: hp('7%'),
+    marginTop: hp('0.7%'),
     borderRadius: 8,
-    borderWidth: wp('0.1%'),
-    borderColor: '#2A3256',
     alignSelf: 'center',
     flexDirection: 'row',
-    elevation: 8,
+    elevation: 5,
   },
   btn: {
-    width: '90%',
-    height: hp('9%'),
+    width: '95%',
+    height: hp('7%'),
     backgroundColor: 'white',
     alignSelf: 'center',
     borderRadius: wp('2%'),
-    marginTop: hp('2%'),
+    marginTop: hp('1%'),
     padding: 12,
     flexDirection: 'row',
     justifyContent: 'space-between',
     elevation: 5,
+    alignItems: 'center',
   },
   btnTxt: {
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
   smlfnt: {
     color: 'black',
     fontWeight: '400',
-    fontFamily: 'Roboto-Regular',
   },
   txtinpt: {
     width: wp('83%'),
     backgroundColor: 'white',
-    height: hp('7%'),
-    fontFamily: 'Roboto-Regular',
+    height: hp('5.5%'),
+    fontWeight: '400',
     color: 'black',
     marginTop: hp('0.8%'),
     paddingHorizontal: wp('5%'),
@@ -221,7 +219,7 @@ const styles = StyleSheet.create({
   Deltxt: {
     color: '#FF0307',
     marginLeft: wp('1%'),
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
 });
 

@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   txt: {
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '400',
     color: 'black',
     marginHorizontal: wp('3%'),
     marginVertical: hp('2%'),

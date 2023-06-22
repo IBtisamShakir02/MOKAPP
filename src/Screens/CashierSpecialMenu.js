@@ -87,7 +87,7 @@ const SpecialMenu = ({navigation}) => {
           <CartBtn
             text="(Count) Items  Total:(Bill)"
             IconName="shopping-cart"
-            onPress={() => navigation.push('')}
+            onPress={() => navigation.push('Order')}
             height={60}
           />
         </View>
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'left',
     marginHorizontal: hp('2%'),
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     marginTop: hp('-0.5%'),
   },
   middlecont: {
@@ -143,12 +143,12 @@ const styles = StyleSheet.create({
   },
   nametxt: {
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     marginLeft: wp('3%'),
   },
   pricetxt: {
     color: '#1A72DD',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     marginLeft: wp('3%'),
   },
   cartcont: {

@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   textstyle: {
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
 });
 

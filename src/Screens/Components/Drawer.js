@@ -11,16 +11,9 @@ const Drawer = createDrawerNavigator();
 const DrawerNav = () => {
   return (
     <Drawer.Navigator
-      // screenOptions={{
-      //   drawerStyle: {
-      //     width: widthPercentageToDP('60%'),
-      //     backgroundColor: 'white',
-      //   },
-      // }}
-
       drawerContent={props => <Sidebar {...props} />}>
       <Drawer.Screen
-        name="Cashier"
+        name="CashManager"
         component={BottomNavigation}
         options={{
           headerShown: false,

@@ -9,7 +9,6 @@ import SignUp from './src/Screens/SignUp';
 const Stack = createNativeStackNavigator();
 import Addproduct from './src/Screens/AddProduct';
 import ListProduct from './src/Screens/Listproduct';
-import CashierManualInput from './src/Screens/CashierManualInput';
 import PaymentMethod1 from './src/Screens/PaymentMethodInput';
 import SpecialMenu from './src/Screens/CashierSpecialMenu';
 import ForgotPassword from './src/Screens/ForgotPassword';
@@ -19,6 +18,7 @@ import ManageStore from './src/Screens/ManageStore';
 import Discount from './src/Screens/Discount';
 import Customer from './src/Screens/Customer';
 import NewCustomer from './src/Screens/NewCustomer';
+import Order from './src/Screens/Order';
 
 function App() {
   return (
@@ -95,15 +95,6 @@ function App() {
             headerShown: false,
           }}
         />
-
-        <Stack.Screen
-          name="CashierManIn"
-          component={CashierManualInput}
-          options={{
-            headerShown: false,
-          }}
-        />
-
         <Stack.Screen
           name="PaymentMethod1"
           component={PaymentMethod1}
@@ -149,6 +140,13 @@ function App() {
         <Stack.Screen
           name="NewCustomer"
           component={NewCustomer}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Order"
+          component={Order}
           options={{
             headerShown: false,
           }}

@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: hp('7%'),
     marginBottom: hp('1%'),
-    fontFamily: 'Roboto-Medium',
+    fontWeight:'500'
   },
   recimgview: {
     alignItems: 'center',
@@ -113,7 +113,6 @@ const styles = StyleSheet.create({
   smltxt: {
     color: 'black',
     textAlign: 'center',
-    fontFamily: 'Roboto-Regular',
     marginTop: hp('1%'),
   },
   img: {

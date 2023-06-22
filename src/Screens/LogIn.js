@@ -40,7 +40,7 @@ const LogIn = ({navigation}) => {
             style={{
               color: 'black',
               fontSize: getFontSize(19),
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
             }}>
             Select Login as Owner or as Employee to Continue.
           </Text>
@@ -78,7 +78,7 @@ const LogIn = ({navigation}) => {
               textAlign: 'center',
               fontSize: getFontSize(18),
               marginBottom: hp('0.3%'),
-              fontFamily: 'Roboto-Medium',
+              fontWeight: '400',
             }}>
             or
           </Text>
@@ -103,7 +103,7 @@ const LogIn = ({navigation}) => {
               color: 'black',
               textAlign: 'center',
               fontSize: getFontSize(17),
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
             }}>
             Don't have an Account?
           </Text>
@@ -116,7 +116,7 @@ const LogIn = ({navigation}) => {
                 textAlign: 'center',
                 fontSize: getFontSize(20),
                 textDecorationLine: 'underline',
-                fontFamily: 'Roboto-Medium',
+                fontWeight: '500',
               }}>
               SignUp
             </Text>
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   cont1txt: {
     alignSelf: 'center',
     color: 'black',
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
   },
   fstcont: {
     height: hp('5.5%'),

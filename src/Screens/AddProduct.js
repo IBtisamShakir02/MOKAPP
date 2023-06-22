@@ -191,13 +191,13 @@ const Addproduct = ({navigation}) => {
             inputStyles={{
               color: 'black',
               fontSize: getfontSize(17),
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
             }}
             dropdownTextStyles={{
               color: 'black',
               fontSize: getfontSize(15),
               textAlign: 'center',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
             }}
             dropdownStyles={{
               width: wp('85%'),
@@ -271,13 +271,13 @@ const Addproduct = ({navigation}) => {
             inputStyles={{
               color: 'black',
               fontSize: getfontSize(17),
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
             }}
             dropdownTextStyles={{
               color: 'black',
               fontSize: getfontSize(15),
               textAlign: 'center',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
             }}
             dropdownStyles={{
               width: wp('85%'),
@@ -318,11 +318,11 @@ const styles = StyleSheet.create({
     marginTop: hp('2.5%'),
     marginLeft: wp('5%'),
     marginBottom: hp('0.7%'),
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
   Nametxt: {
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     marginStart: wp('5%'),
     marginTop: hp('2.5%'),
   },
@@ -334,7 +334,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: hp('0.8%'),
     backgroundColor: 'white',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: '#2A3256',
     height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
@@ -351,7 +351,7 @@ const styles = StyleSheet.create({
 
   Typeviewtxt: {
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     marginLeft: wp('5%'),
     marginTop: hp('2.3%'),
   },
@@ -364,7 +364,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: hp('1.5%'),
     backgroundColor: 'white',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: '#2A3256',
     height: hp('6%'),
     paddingHorizontal: wp('4%'),
@@ -394,7 +394,7 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     marginTop: hp('1.3%'),
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
 });
 

@@ -83,7 +83,7 @@ const AccountTab = ({navigation}) => {
                   color: 'white',
                   fontSize: getFontSize(12),
                   textAlign: 'center',
-                  fontFamily: 'Rubik-Regular',
+                  fontWeight: '400',
                 }}>
                 Choose From Gallery
               </Text>
@@ -224,8 +224,8 @@ const AccountTab = ({navigation}) => {
               styles.cont2txt,
               {
                 textAlign: 'left',
-                fontFamily: 'Rubik-Medium',
-                fontSize: getFontSize(13),
+                fontWeight: '400',
+                fontSize: getFontSize(12),
                 marginLeft: wp('7%'),
               },
             ]}>
@@ -272,12 +272,12 @@ const styles = StyleSheet.create({
   txt1: {
     color: '#2A3256',
     textAlignVertical: 'center',
-    fontFamily: 'Rubik-Medium',
+    fontWeight: '500',
     marginTop: hp('-3%'),
   },
   txt2: {
     color: 'black',
-    fontFamily: 'Rubik-Regular',
+    fontWeight: '400',
   },
   secCont: {
     flex: 1.5,
@@ -296,7 +296,7 @@ const styles = StyleSheet.create({
   },
   cont2txt: {
     color: 'black',
-    fontFamily: 'Rubik-Regular',
+    fontWeight: '400',
     margin: 9,
     marginTop: 15,
     textAlign: 'center',

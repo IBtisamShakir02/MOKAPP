@@ -82,7 +82,7 @@ const CashierManager = ({navigation}) => {
               fontSize: getFontSize(20),
               marginTop: hp('1.7%'),
               marginHorizontal: wp('4.5%'),
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
             }}>
             All Products
           </Text>
@@ -140,7 +140,7 @@ const CashierManager = ({navigation}) => {
           <CartBtn
             text="(Count) Items  Total:(Bill)"
             IconName="shopping-cart"
-            onPress={() => navigation.push()}
+            onPress={() => navigation.push('Order')}
             height={60}
           />
         </TouchableOpacity>
@@ -169,12 +169,12 @@ const styles = StyleSheet.create({
   },
   nametxt: {
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     marginLeft: wp('3%'),
   },
   pricetxt: {
     color: '#1A72DD',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     marginLeft: wp('3%'),
   },
   cartcont: {
