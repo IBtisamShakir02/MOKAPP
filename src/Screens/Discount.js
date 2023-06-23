@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'center',
     borderWidth: wp('0.1%'),
-    borderColor: 'black',
+    borderColor: '#2A3256',
     borderRadius: wp('3%'),
     flexDirection: 'row',
     alignItems: 'center',
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     paddingRight: wp('2%'),
     borderRadius: wp('3%'),
     backgroundColor: 'white',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: 'black',
   },
   MiddleCont: {
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
   },
   btntxt: {
     color: 'white',
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
   },
 });
 

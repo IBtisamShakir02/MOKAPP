@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -11,7 +11,6 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-import Dropdown from '../Components/Dropdown';
 import CashierIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import HistoryIcon from 'react-native-vector-icons/FontAwesome5';
 import Report from 'react-native-vector-icons/Octicons';
@@ -29,7 +28,6 @@ const Sidebar = ({navigation}) => {
         <Text style={[styles.upperconttxt, {fontSize: getFontSize(22)}]}>
           MyNameStore
         </Text>
-        <Dropdown />
       </View>
       <View style={styles.scndcont}>
         <TouchableOpacity
@@ -49,7 +47,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('5%'),
             }}>
             Cashier
@@ -71,7 +69,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('5%'),
             }}>
             History Transactions
@@ -93,7 +91,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('7%'),
             }}>
             Report
@@ -116,7 +114,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('5%'),
             }}>
             Manage Store
@@ -139,7 +137,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('4.5%'),
             }}>
             Account
@@ -161,7 +159,7 @@ const Sidebar = ({navigation}) => {
             style={{
               fontSize: getFontSize(17),
               color: 'white',
-              fontFamily: 'Roboto-Regular',
+              fontWeight: '400',
               marginLeft: wp('5%'),
             }}>
             Support
@@ -186,13 +184,13 @@ const styles = StyleSheet.create({
   },
   uppercont: {
     width: wp('65%'),
-    height: hp('15%'),
+    height: hp('10%'),
     alignSelf: 'center',
     marginTop: hp('4%'),
   },
   upperconttxt: {
     color: 'white',
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
     marginLeft: wp('4%'),
     marginTop: hp('2%'),
   },
@@ -205,7 +203,7 @@ const styles = StyleSheet.create({
     height: hp('12%'),
     width: wp('67%'),
     alignSelf: 'center',
-    marginTop: hp('8%'),
+    marginTop: hp('14%'),
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -219,7 +217,7 @@ const styles = StyleSheet.create({
   },
   btntxt: {
     color: '#1A72DD',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '500',
   },
 });
 

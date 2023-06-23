@@ -7,7 +7,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 // create a component
-const CusButton = ({onPress}) => {
+const AddButton = ({onPress}) => {
   return (
     <SafeAreaView>
       <TouchableOpacity onPress={onPress} activeOpacity={0.8}>
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default CusButton;
+export default AddButton;

@@ -44,7 +44,7 @@ const CartBtn = ({text, onPress, IconName, height}) => {
 // define your styles
 const styles = StyleSheet.create({
   button: {
-    width: wp('95%'),
+    width: wp('93%'),
     borderRadius: wp('2%'),
     alignItems: 'center',
     justifyContent: 'space-evenly',
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     textTransform: 'uppercase',
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
   },
 });
 

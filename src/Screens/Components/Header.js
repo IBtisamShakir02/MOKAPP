@@ -28,7 +28,7 @@ const Header = ({text, onPress, iconname}) => {
               marginLeft: widthPercentageToDP('4%'),
             }}>
             {iconname ? (
-              <Arrowleft name={iconname} size={22} color="#1A72DD" />
+              <Arrowleft name={iconname} size={22} color="white" />
             ) : null}
           </TouchableOpacity>
         </View>
@@ -44,22 +44,22 @@ const styles = StyleSheet.create({
   container: {
     height: heightPercentageToDP('8.3%'),
     width: widthPercentageToDP('100%'),
-    backgroundColor: 'white',
+    backgroundColor: '#1A72DD',
     alignSelf: 'center',
   },
   txt: {
-    fontFamily: 'Roboto-Medium',
-    color: '#1A72DD',
+    fontWeight: '500',
+    color: 'white',
     marginTop: heightPercentageToDP('1.7%'),
     textAlign: 'center',
   },
   textview: {
-    backgroundColor: 'white',
+    backgroundColor: '#1A72DD',
     height: heightPercentageToDP('8.3%'),
     width: widthPercentageToDP('70%'),
   },
   arrowview: {
-    backgroundColor: 'white',
+    backgroundColor: '#1A72DD',
     height: heightPercentageToDP('8.3%'),
     width: widthPercentageToDP('14%'),
     marginStart: widthPercentageToDP('-15%'),

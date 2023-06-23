@@ -1,6 +1,6 @@
 //import liraries
 import React from 'react';
-import {createDrawerNavigator} from '@react-navigation/drawer'
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import BottomNavigation from './BottomNavigation';
 import AccountTab from '../AccountTab';
 import Sidebar from '../Components/Sidebar';
@@ -10,17 +10,9 @@ const Drawer = createDrawerNavigator();
 // create a component
 const DrawerNav = () => {
   return (
-    <Drawer.Navigator
-      // screenOptions={{
-      //   drawerStyle: {
-      //     width: widthPercentageToDP('60%'),
-      //     backgroundColor: 'white',
-      //   },
-      // }}
-
-      drawerContent={props => <Sidebar {...props} />}>
+    <Drawer.Navigator drawerContent={props => <Sidebar {...props} />}>
       <Drawer.Screen
-        name="Cashier"
+        name="CashManager"
         component={BottomNavigation}
         options={{
           headerShown: false,

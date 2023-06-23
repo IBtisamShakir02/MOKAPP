@@ -21,8 +21,7 @@ const HelloScreen = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar backgroundColor="white" barStyle="dark-content" />
-
+      <StatusBar backgroundColor="#1A72DD" barStyle="light-content" />
       <View style={{marginTop: hp('3%')}}>
         <Text style={[styles.welcometxt, {fontSize: getFontSize(60)}]}>
           MOKPOS
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: hp('7%'),
     marginBottom: hp('1%'),
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
   },
   recimgview: {
     alignItems: 'center',
@@ -113,7 +112,6 @@ const styles = StyleSheet.create({
   smltxt: {
     color: 'black',
     textAlign: 'center',
-    fontFamily: 'Roboto-Regular',
     marginTop: hp('1%'),
   },
   img: {

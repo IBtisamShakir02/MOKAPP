@@ -179,26 +179,24 @@ const styles = StyleSheet.create({
   Conta: {
     backgroundColor: 'white',
     width: wp('97%'),
-    height: hp('20%'),
+    height: hp('13%'),
     alignSelf: 'center',
     borderWidth: wp('0.1%'),
-    marginTop: hp('0.5%'),
     borderRadius: hp('2%'),
     borderColor: '#d3d3d3',
     elevation: 5,
   },
   ContaTxt: {
     color: 'black',
-    marginTop: hp('3%'),
+    marginTop: hp('1%'),
     marginLeft: wp('4%'),
-    marginBottom: hp('2%'),
+    marginBottom: hp('1%'),
     fontWeight: '400',
-    fontFamily: 'Roboto-Regular',
   },
   ContField: {
-    height: hp('7%'),
+    height: hp('6%'),
     width: wp('90%'),
-    borderColor: '#d3d3d3',
+    borderColor: '#2A3256',
     borderWidth: wp('0.1%'),
     alignSelf: 'center',
     justifyContent: 'center',
@@ -211,7 +209,7 @@ const styles = StyleSheet.create({
     marginLeft: wp('5%'),
     alignSelf: 'center',
     justifyContent: 'center',
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
   },
   ContInput: {
     width: wp('84%'),
@@ -219,8 +217,8 @@ const styles = StyleSheet.create({
     color: '#1A72DD',
     justifyContent: 'center',
     alignSelf: 'center',
-    fontFamily: 'Roboto-Regular',
-    marginTop: hp('0.3%'),
+    fontWeight: '500',
+    marginTop: hp('0.2%'),
   },
   calcont: {
     height: hp('42%'),
@@ -263,7 +261,7 @@ const styles = StyleSheet.create({
   },
   calbtntxt: {
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
   Dot: {
     color: 'black',
@@ -291,7 +289,7 @@ const styles = StyleSheet.create({
   },
   calbtntxt2: {
     color: 'white',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
   },
 });
 

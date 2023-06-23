@@ -105,21 +105,21 @@ const styles = StyleSheet.create({
   text: {
     marginTop: hp('3%'),
     color: 'black',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     marginHorizontal: wp('5%'),
   },
 
   field: {
-    borderBottomColor: 'black',
+    borderBottomColor: '#2A3256',
     borderBottomWidth: wp('0.2%'),
     borderRadius: wp('2%'),
     width: wp('80%'),
     marginTop: hp('0.8%'),
     backgroundColor: 'white',
     color: '#2A3256',
-    height: hp('5.5%'),
+    height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     elevation: 1,
     alignSelf: 'center',
   },
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     width: wp('90%'),
     backgroundColor: 'white',
     justifyContent: 'center',
-    marginTop: hp('1%'),
+    marginTop: hp('5%'),
   },
 });
 

@@ -24,6 +24,7 @@ const CusButton = ({
 }) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
+
   return (
     <SafeAreaView>
       <TouchableOpacity
@@ -44,7 +45,7 @@ const CusButton = ({
               />
             ) : null}
             <Text
-              style={[styles.buttonText, {color, fontSize: getFontSize(20)}]}>
+              style={[styles.buttonText, {color, fontSize: getFontSize(17)}]}>
               {' '}
               {text}{' '}
             </Text>
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     flex: 1,
     textTransform: 'uppercase',
     textAlign: 'center',
-    fontFamily: 'Roboto-Medium',
+    fontWeight: '500',
   },
 });
 

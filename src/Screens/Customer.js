@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     justifyContent: 'center',
     borderWidth: wp('0.1%'),
-    borderColor: 'black',
+    borderColor: '#2A3256',
     borderRadius: wp('3%'),
     flexDirection: 'row',
     alignItems: 'center',
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     paddingRight: wp('2%'),
     borderRadius: wp('3%'),
     backgroundColor: 'white',
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: 'black',
   },
   MiddleCont: {
@@ -137,13 +137,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginTop: hp('0.3%'),
     borderBottomWidth: wp('0.2%'),
-    borderBottomColor: 'black',
+    borderBottomColor: '#2A3256',
     justifyContent: 'space-between',
     flexDirection: 'row',
     padding: wp('2%'),
   },
   smlfont: {
-    fontFamily: 'Roboto-Regular',
+    fontWeight: '400',
     color: 'black',
   },
   btnView: {
