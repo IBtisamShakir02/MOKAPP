@@ -96,7 +96,6 @@ function App() {
             headerShown: false,
           }}
         />
-
         <Stack.Screen
           name="PaymentMethod1"
           component={PaymentMethod1}
