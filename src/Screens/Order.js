@@ -193,58 +193,66 @@ const Order = ({navigation}) => {
             </View>
           </ScrollView>
         </View>
-        <TouchableOpacity
-          onPress={() => navigation.push('Discount')}
-          activeOpacity={0.7}
-          style={[
-            styles.manualcont,
-            {
-              borderBottomColor: 'black',
-              borderBottomWidth: wp('0.2%'),
-              height: hp('5%'),
-              width: wp('95%'),
-            },
-          ]}>
-          <Text style={[styles.V1txt, {fontSize: getFontSize(20)}]}>
-            Dicount
-          </Text>
-          <RightArrow name="right" color={'black'} size={20} />
-        </TouchableOpacity>
         <View
-          style={[
-            styles.manualcont,
-            {
-              borderBottomColor: 'black',
-              borderBottomWidth: wp('0.2%'),
-              height: hp('5%'),
-              width: wp('95%'),
-            },
-          ]}>
-          <Text style={[styles.V1txt, {fontSize: getFontSize(20)}]}>
-            SubTotal:
-          </Text>
-          <Text style={[styles.V1txt, {fontSize: getFontSize(20)}]}>
-            $ 20.10
-          </Text>
-        </View>
-        <TouchableOpacity activeOpacity={0.6} style={styles.deltxt}>
-          <DelIcon name="delete-outline" color={'red'} size={22} />
-          <Text
-            style={{
-              color: 'red',
-              fontWeight: '400',
-              fontSize: getFontSize(18),
-            }}>
-            Delete Order
-          </Text>
-        </TouchableOpacity>
-        <View style={styles.btnCont}>
-          <CusButton
-            text="Place Order"
-            backgroundColor={'#1A72DD'}
-            color={'white'}
-            onPress={() => navigation.push('PaymentMethod1')}
-          />
+          style={{
+            backgroundColor: 'white',
+            height: hp('28%'),
+            width: wp('97%'),
+            alignSelf: 'center',
+          }}>
+          <TouchableOpacity
+            onPress={() => navigation.push('Discount')}
+            activeOpacity={0.7}
+            style={[
+              styles.manualcont,
+              {
+                borderBottomColor: 'black',
+                borderBottomWidth: wp('0.2%'),
+                height: hp('5%'),
+                width: wp('95%'),
+              },
+            ]}>
+            <Text style={[styles.V1txt, {fontSize: getFontSize(20)}]}>
+              Dicount
+            </Text>
+            <RightArrow name="right" color={'black'} size={20} />
+          </TouchableOpacity>
+          <View
+            style={[
+              styles.manualcont,
+              {
+                borderBottomColor: 'black',
+                borderBottomWidth: wp('0.2%'),
+                height: hp('5%'),
+                width: wp('95%'),
+              },
+            ]}>
+            <Text style={[styles.V1txt, {fontSize: getFontSize(20)}]}>
+              SubTotal:
+            </Text>
+            <Text style={[styles.V1txt, {fontSize: getFontSize(20)}]}>
+              $ 20.10
+            </Text>
+          </View>
+          <TouchableOpacity activeOpacity={0.6} style={styles.deltxt}>
+            <DelIcon name="delete-outline" color={'red'} size={22} />
+            <Text
+              style={{
+                color: 'red',
+                fontWeight: '400',
+                fontSize: getFontSize(18),
+              }}>
+              Delete Order
+            </Text>
+          </TouchableOpacity>
+          <View style={styles.btnCont}>
+            <CusButton
+              text="Place Order"
+              backgroundColor={'#1A72DD'}
+              color={'white'}
+              onPress={() => navigation.push('PaymentMethod1')}
+            />
+          </View>
         </View>
       </View>
     </SafeAreaView>

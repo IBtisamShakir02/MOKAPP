@@ -54,6 +54,7 @@ const Sidebar = ({navigation}) => {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
+          onPress={() => navigation.navigate('History')}
           activeOpacity={0.8}
           style={{
             width: wp('63%'),

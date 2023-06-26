@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   field: {
     borderBottomColor: '#2A3256',
     borderBottomWidth: wp('0.2%'),
-    borderRadius: wp('2%'),
+    borderRadius: wp('1%'),
     width: wp('80%'),
     marginTop: hp('0.8%'),
     backgroundColor: 'white',
@@ -127,7 +127,6 @@ const styles = StyleSheet.create({
     height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
     fontWeight: '400',
-    elevation: 1,
     alignSelf: 'center',
   },
   fieldcont: {

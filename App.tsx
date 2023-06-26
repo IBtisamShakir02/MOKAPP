@@ -20,6 +20,7 @@ import Customer from './src/Screens/Customer';
 import NewCustomer from './src/Screens/NewCustomer';
 import Order from './src/Screens/Order';
 import SuccessScreen from './src/Screens/SuccessScreen';
+import History from './src/Screens/History';
 
 function App() {
   return (
@@ -155,6 +156,13 @@ function App() {
         <Stack.Screen
           name="SuccessScreen"
           component={SuccessScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="History"
+          component={History}
           options={{
             headerShown: false,
           }}

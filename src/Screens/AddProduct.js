@@ -329,7 +329,7 @@ const styles = StyleSheet.create({
   field: {
     borderBottomColor: '#2A3256',
     borderBottomWidth: wp('0.2%'),
-    borderRadius: wp('2%'),
+    borderRadius: wp('1%'),
     width: wp('85%'),
     alignSelf: 'center',
     marginTop: hp('0.8%'),
@@ -338,7 +338,6 @@ const styles = StyleSheet.create({
     color: '#2A3256',
     height: hp('6.5%'),
     paddingHorizontal: wp('5%'),
-    elevation: 1,
   },
   Typeview: {
     backgroundColor: '#EBEEEE',
@@ -359,7 +358,7 @@ const styles = StyleSheet.create({
   Typefiled: {
     borderBottomColor: '#2A3256',
     borderBottomWidth: wp('0.2%'),
-    borderRadius: wp('2%'),
+    borderRadius: wp('1%'),
     width: wp('80%'),
     alignSelf: 'center',
     marginTop: hp('1.5%'),
@@ -368,7 +367,6 @@ const styles = StyleSheet.create({
     color: '#2A3256',
     height: hp('6%'),
     paddingHorizontal: wp('4%'),
-    elevation: 1,
   },
   Picview: {
     backgroundColor: 'white',
