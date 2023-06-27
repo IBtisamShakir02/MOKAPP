@@ -67,7 +67,7 @@ function App() {
         />
 
         <Stack.Screen
-          name="CashManager"
+          name="CashierManager"
           component={DrawerNav}
           options={{
             headerShown: false,

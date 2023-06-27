@@ -99,7 +99,10 @@ const ManageStore = ({navigation}) => {
           <Text style={[styles.setproducttxt, {fontSize: getFontSize(20)}]}>
             Cashier & Payment
           </Text>
-          <TouchableOpacity activeOpacity={0.4} style={styles.txtpress}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('PaymentMethod1')}
+            activeOpacity={0.4}
+            style={styles.txtpress}>
             <Text style={[styles.smlfont, {fontSize: getFontSize(17)}]}>
               Payment Method
             </Text>

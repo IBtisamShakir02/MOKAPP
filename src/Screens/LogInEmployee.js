@@ -96,7 +96,7 @@ const LogInEmployee = ({navigation}) => {
             text="LogIn"
             backgroundColor={'#1A72DD'}
             color={'white'}
-            onPress={Submit}
+            onPress={() => navigation.navigate('CashierManager')}
           />
         </TouchableOpacity>
       </View>

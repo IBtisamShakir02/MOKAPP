@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -15,10 +15,14 @@ import {
 } from 'react-native-responsive-screen';
 import Filter from 'react-native-vector-icons/FontAwesome';
 import ArrowRight from 'react-native-vector-icons/AntDesign';
+import DatePicker from 'react-native-date-picker';
 
 const History = ({navigation}) => {
   const fontScale = PixelRatio.getFontScale();
   const getFontSize = size => size / fontScale;
+
+  const [date, setDate] = useState(new Date());
+  const [open, setOpen] = useState(false);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -27,7 +31,11 @@ const History = ({navigation}) => {
         onPress={() => navigation.push('CashManager')}
         iconname={'arrowleft'}
       />
-      <TouchableOpacity activeOpacity={0.8} style={styles.datecont}>
+
+      <TouchableOpacity
+        onPress={() => setOpen(true)}
+        activeOpacity={0.6}
+        style={styles.datecont}>
         <View style={styles.innerContainer}>
           <Filter name="sort" color={'black'} size={17} />
           <Text style={[styles.DateTxt, {fontSize: getFontSize(18)}]}>
@@ -50,6 +58,18 @@ const History = ({navigation}) => {
           />
         </View>
       </TouchableOpacity>
+      <DatePicker
+        modal
+        open={open}
+        date={date}
+        onConfirm={date => {
+          setOpen(false);
+          setDate(date);
+        }}
+        onCancel={() => {
+          setOpen(false);
+        }}
+      />
       <ScrollView
         style={{
           height: hp('91.5%'),
@@ -233,7 +253,7 @@ const styles = StyleSheet.create({
     width: wp('90%'),
     backgroundColor: 'white',
     alignItems: 'center',
-    paddingLeft: wp('10%'),
+    paddingLeft: wp('4%'),
     flexDirection: 'row',
   },
   DateTxt: {
